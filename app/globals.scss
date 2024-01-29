@@ -1,9 +1,9 @@
 :root {
 	--max-width: 1100px;
 	--border-radius: 12px;
-	--font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-		"Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-		"Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+	--font-mono: "Mona Sans", ui-monospace, Menlo, Monaco, "Cascadia Mono",
+		"Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+		"Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
 	--foreground-rgb: 0, 0, 0;
 	--background: #060606;
@@ -74,6 +74,15 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	caret-color: transparent;
 }
 
 html,

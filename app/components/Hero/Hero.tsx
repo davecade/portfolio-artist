@@ -14,8 +14,14 @@ function Hero() {
 				style={{ objectFit: "cover" }}
 			/>
 			<main className={styles.main_hero_content}>
-				<h1>Hello there, I'm Dave Cadelina</h1>
-				<p className={styles.intro}>an Artist from Sydney</p>
+				<div className={styles.title_first_line}>
+					<h1 className={styles.title_greeting}>Koi Spirit</h1>
+					<div className={styles.title_line}></div>
+				</div>
+				{/* <h1 className={styles.title_name}>Rhyss Labo</h1> */}
+				<h2 className={styles.title_profession_location}>
+					Digital Art X Game Development
+				</h2>
 			</main>
 		</div>
 	);
