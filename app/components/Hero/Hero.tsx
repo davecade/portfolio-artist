@@ -32,11 +32,11 @@ function Hero() {
 					<ActionLink
 						bold
 						text={"Contact Us"}
-						paddingRight={"small"}
+						marginRight={"small"}
 						onClick={() => {}}
 					/>
 					<ActionLink
-						paddingLeft={"small"}
+						marginLeft={"small"}
 						text={"Browse Portfolio"}
 						onClick={() => {}}
 					/>

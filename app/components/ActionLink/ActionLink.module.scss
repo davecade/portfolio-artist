@@ -3,15 +3,36 @@
 .action_link_container {
 	.action_link_button {
 		@include flex-start;
+		padding-bottom: 0.8rem;
 
 		.action_link_text {
 			font-size: 1.3rem;
 		}
-		padding-bottom: 0.8rem;
 	}
+
 	.action_link_underline {
-		height: 1px;
+		transition: all 0.3s ease;
+		height: 2px;
 		width: 100%;
+		opacity: 0.7;
 		background-color: var(--app-white);
+	}
+
+	.action_link_icon {
+		transition: all 0.3s ease;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		.action_link_button {
+			.action_link_icon {
+				transform: translate(5px, -5px);
+			}
+		}
+
+		.action_link_underline {
+			opacity: 1;
+		}
 	}
 }
