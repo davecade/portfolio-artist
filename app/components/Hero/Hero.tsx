@@ -6,6 +6,8 @@ import styles from "./Hero.module.scss";
 import ActionLink from "../ActionLink/ActionLink";
 
 function Hero() {
+
+
 	return (
 		<div className={styles.container}>
 			<Image
