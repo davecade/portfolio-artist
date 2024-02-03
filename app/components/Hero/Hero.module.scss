@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .container {
 	position: relative;
 	height: 100vh;
@@ -35,7 +37,7 @@
 
 		h1,
 		p {
-			color: white;
+			color: var(--app-white);
 			text-align: center;
 		}
 
@@ -45,16 +47,16 @@
 			justify-content: flex-start;
 			align-items: center;
 
-			.title_greeting {
+			.title_company {
 				font-size: 6rem;
 				padding-right: 2rem;
-				color: white;
+				color: -var(--app-white);
 			}
 
 			.title_line {
 				height: 0.4rem;
 				width: 15rem;
-				background-color: white;
+				background-color: var(--app-white);
 				border: 1px solid red;
 			}
 		}
@@ -65,16 +67,31 @@
 			text-align: start;
 		}
 
-		.title_profession_location {
+		.title_service {
 			width: 100%;
 			font-size: 4rem;
 			text-align: start;
+			padding-bottom: 2rem;
 		}
 
-		.x {
+		.title_description_container {
 			width: 100%;
-			font-size: 4rem;
-			text-align: center;
+			font-size: 1.2rem;
+			text-align: start;
+			line-height: 2rem;
+			padding-bottom: 3rem;
+
+			.title_description {
+				width: 50%;
+				font-size: 1.2rem;
+				text-align: start;
+			}
+		}
+
+		.action_link_container {
+			width: 100%;
+			@include flex-start;
+			flex-direction: row;
 		}
 	}
 }

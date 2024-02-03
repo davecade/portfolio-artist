@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
+import ActionLink from "../ActionLink/ActionLink";
 
 function Hero() {
 	return (
@@ -15,13 +18,29 @@ function Hero() {
 			/>
 			<main className={styles.main_hero_content}>
 				<div className={styles.title_first_line}>
-					<h1 className={styles.title_greeting}>Koi Spirit</h1>
+					<h1 className={styles.title_company}>Koi Spirit</h1>
 					<div className={styles.title_line}></div>
 				</div>
-				{/* <h1 className={styles.title_name}>Rhyss Labo</h1> */}
-				<h2 className={styles.title_profession_location}>
-					Digital Art X Game Development
-				</h2>
+				<h2 className={styles.title_service}>Digital Art X Game Development</h2>
+				<div className={styles.title_description_container}>
+					<p className={styles.title_description}>
+						Lorem ipsum dolor sit amet consectetur in quisque varius eget turpis
+						sollicitudin purus arcu morbi lorem lacus sit in tellus dolor eget.
+					</p>
+				</div>
+				<div className={styles.action_link_container}>
+					<ActionLink
+						bold
+						text={"Contact Us"}
+						paddingRight={"small"}
+						onClick={() => {}}
+					/>
+					<ActionLink
+						paddingLeft={"small"}
+						text={"Browse Portfolio"}
+						onClick={() => {}}
+					/>
+				</div>
 			</main>
 		</div>
 	);

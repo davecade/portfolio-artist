@@ -1,0 +1,17 @@
+@import "../../styles/mixins";
+
+.action_link_container {
+	.action_link_button {
+		@include flex-start;
+
+		.action_link_text {
+			font-size: 1.3rem;
+		}
+		padding-bottom: 0.8rem;
+	}
+	.action_link_underline {
+		height: 1px;
+		width: 100%;
+		background-color: var(--app-white);
+	}
+}
