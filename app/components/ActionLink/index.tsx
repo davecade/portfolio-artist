@@ -45,13 +45,14 @@ const ActionLink = ({
 
 	return (
 		<div
+			onClick={onClick}
 			className={styles.action_link_container}
 			style={{
 				marginLeft: marginLeft ? marginLeftStyles : undefined,
 				marginRight: marginRight ? marginRightStyles : undefined,
 			}}
 		>
-			<div className={styles.action_link_button} onClick={onClick}>
+			<div className={styles.action_link_content}>
 				<p
 					className={styles.action_link_text}
 					style={{ fontWeight: bold ? "bold" : undefined }}

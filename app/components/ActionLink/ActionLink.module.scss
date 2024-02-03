@@ -3,7 +3,7 @@
 .action_link_container {
 	width: fit-content;
 
-	.action_link_button {
+	.action_link_content {
 		@include flex-start;
 		padding-bottom: 0.8rem;
 
@@ -26,8 +26,7 @@
 
 	&:hover {
 		cursor: pointer;
-
-		.action_link_button {
+		.action_link_content {
 			.action_link_icon {
 				transform: translate(5px, -5px);
 			}
