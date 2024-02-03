@@ -11,5 +11,19 @@
 		justify-content: center;
 		width: 1360px;
 		height: 100%;
+
+		.heading_action_link_container {
+			@include flex-center;
+			width: 100%;
+
+			.left_side {
+				width: 50%;
+			}
+
+			.right_side {
+				@include flex-end;
+				width: 50%;
+			}
+		}
 	}
 }
