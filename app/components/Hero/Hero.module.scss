@@ -4,6 +4,7 @@
 	position: relative;
 	height: 100vh;
 	width: 100%;
+	margin-bottom: 6rem;
 
 	&::before {
 		content: "";
@@ -14,9 +15,9 @@
 		bottom: 0;
 		background: linear-gradient(
 			to top,
-			rgba(0, 0, 0, 1) 0%,
-			rgba(0, 0, 0, 0.7) 30%,
-			rgba(0, 0, 0, 0.2) 100%
+			rgba(6, 6, 6, 1) 0%,
+			rgba(6, 6, 6, 0.7) 30%,
+			rgba(6, 6, 6, 0.2) 100%
 		);
 		z-index: 1; // Ensure this is above the image but below the content
 	}

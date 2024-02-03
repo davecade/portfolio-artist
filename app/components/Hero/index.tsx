@@ -3,11 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
-import ActionLink from "../ActionLink/ActionLink";
+import ActionLink from "../ActionLink";
+import Heading from "../Heading";
 
 function Hero() {
-
-
 	return (
 		<div className={styles.container}>
 			<Image
@@ -19,10 +18,7 @@ function Hero() {
 				style={{ objectFit: "cover" }}
 			/>
 			<main className={styles.main_hero_content}>
-				<div className={styles.title_first_line}>
-					<h1 className={styles.title_company}>Koi Spirit</h1>
-					<div className={styles.title_line}></div>
-				</div>
+				<Heading text={"Koi Spirit"} size={"large"} />
 				<h2 className={styles.title_service}>Digital Art X Game Development</h2>
 				<div className={styles.title_description_container}>
 					<p className={styles.title_description}>
