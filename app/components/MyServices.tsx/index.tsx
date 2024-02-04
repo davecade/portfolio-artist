@@ -17,6 +17,9 @@ const MyServices = () => {
 						<ActionLink text={"Browse all services"} onClick={() => {}} />
 					</div>
 				</div>
+        <div className={styles.services_container}>
+          
+        </div>
 			</div>
 		</div>
 	);

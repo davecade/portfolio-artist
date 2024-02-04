@@ -15,6 +15,7 @@
 		.heading_action_link_container {
 			@include flex-center;
 			width: 100%;
+			border: 1px solid red;
 
 			.left_side {
 				width: 50%;
@@ -24,6 +25,9 @@
 				@include flex-end;
 				width: 50%;
 			}
+		}
+
+		.services_container {
 		}
 	}
 }
