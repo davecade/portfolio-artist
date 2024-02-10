@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.scss"; // Assume you have some styles defined
-import mySvg from "../../../public/logo-web-icon.svg";
+import mySvg from "@/public/logo-web-icon.svg";
 import Image from "next/image";
 import {
 	FaFacebook,

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ServiceCard.module.scss";
 import Image from "next/image";
+import { MdArrowOutward } from "react-icons/md";
 
 type Props = {
 	image: string;
@@ -20,9 +21,12 @@ const ServiceCard = ({ image, name, description, onClick }: Props) => {
 					width={328}
 					height={598}
 				/>
+				<MdArrowOutward className={styles.arrow_icon} size={40} />
 			</div>
-			<h2 className={styles.name}>{name}</h2>
-			<p className={styles.description}>{description}</p>
+			<div className={styles.text_container}>
+				<h2 className={styles.name}>{name}</h2>
+				<p className={styles.description}>{description}</p>
+			</div>
 		</div>
 	);
 };

@@ -5,7 +5,7 @@ import Heading from "../Heading";
 import styles from "./OurServices.module.scss";
 import ActionLink from "../ActionLink";
 import ServiceCard from "../ServiceCard";
-import { services } from "@/app/data";
+import { services } from "@/data";
 
 const MyServices = () => {
 	return (
