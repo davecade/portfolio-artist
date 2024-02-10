@@ -1,0 +1,14 @@
+@import "../../styles/mixins";
+
+.container {
+	width: 100%;
+	.portfolio_heading_description_container {
+		@include flex-center;
+		flex-direction: column;
+		width: 100%;
+
+		.description {
+			color: #aaa;
+		}
+	}
+}

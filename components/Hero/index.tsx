@@ -18,7 +18,9 @@ function Hero() {
 				style={{ objectFit: "cover" }}
 			/>
 			<main className={styles.main_hero_content}>
-				<Heading text={"Koi Spirit"} size={"large"} />
+				<div className={styles.heading_container}>
+					<Heading text={"Koi Spirit"} size={"large"} lineRight />
+				</div>
 				<h2 className={styles.title_service}>Digital Art X Game Development</h2>
 				<div className={styles.title_description_container}>
 					<p className={styles.title_description}>

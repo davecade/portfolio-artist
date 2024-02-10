@@ -1,11 +1,9 @@
 .heading_container {
-	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 
 	.heading_text {
-		padding-right: 2rem;
 		color: -var(--app-white);
 	}
 

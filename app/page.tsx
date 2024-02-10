@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Hero from "@/components/Hero";
 import MyServices from "@/components/OurServices.tsx";
+import Portfolio from "@/components/Portfolio";
+import Spacer from "@/components/Spacer/Spacer";
 
-export default function Page() {
+export default function Home() {
 	return (
 		<>
 			<Head>
@@ -10,8 +12,10 @@ export default function Page() {
 				<meta name="description" content="Homepage of an Artist's Portfolio" />
 			</Head>
 			<Hero />
+			<Spacer size="medium" />
 			<MyServices />
-			<footer>{/* Footer content */}</footer>
+			<Spacer size="medium" />
+			<Portfolio />
 		</>
 	);
 }

@@ -4,9 +4,11 @@ import styles from "./Heading.module.scss";
 type Props = {
 	text: string;
 	size: "small" | "medium" | "large";
+	lineLeft?: boolean;
+	lineRight?: boolean;
 };
 
-const Heading = ({ text, size }: Props) => {
+const Heading = ({ text, size, lineLeft, lineRight }: Props) => {
 	const fontSizeValue = (() => {
 		switch (size) {
 			case "small":
@@ -48,21 +50,34 @@ const Heading = ({ text, size }: Props) => {
 
 	return (
 		<div className={styles.heading_container}>
+			{lineLeft && (
+				<div
+					className={styles.heading_line}
+					style={{
+						width: widthValue,
+						height: lineHeightValue,
+					}}
+				></div>
+			)}
 			<h1
 				className={styles.heading_text}
 				style={{
 					fontSize: fontSizeValue,
+					paddingRight: lineRight ? "2rem" : undefined,
+					paddingLeft: lineLeft ? "2rem" : undefined,
 				}}
 			>
 				{text}
 			</h1>
-			<div
-				className={styles.heading_line}
-				style={{
-					width: widthValue,
-					height: lineHeightValue,
-				}}
-			></div>
+			{lineRight && (
+				<div
+					className={styles.heading_line}
+					style={{
+						width: widthValue,
+						height: lineHeightValue,
+					}}
+				></div>
+			)}
 		</div>
 	);
 };

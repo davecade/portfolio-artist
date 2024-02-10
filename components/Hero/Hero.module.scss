@@ -4,7 +4,6 @@
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	margin-bottom: 6rem;
 
 	&::before {
 		content: "";
@@ -41,6 +40,11 @@
 		p {
 			color: var(--app-white);
 			text-align: center;
+		}
+
+		.heading_container {
+			@include flex-start;
+			width: 100%;
 		}
 
 		.title_first_line {
