@@ -1,3 +1,5 @@
+@import "@/styles/mixins";
+
 .service_container {
 	cursor: pointer;
 	width: 340px;
@@ -59,8 +61,7 @@
 		.description {
 			transition: all 0.3s ease;
 			line-height: 1.5rem;
-			font-size: 18px;
-			color: #c0c0c0;
+			@include description-font;
 		}
 	}
 
@@ -81,7 +82,7 @@
 		}
 		.text_container {
 			.description {
-				color: #aaa;
+				@include description-font-hover;
 			}
 		}
 	}

@@ -26,3 +26,13 @@
 	justify-content: space-evenly;
 	align-items: center;
 }
+
+@mixin description-font {
+	font-size: 18px;
+	color: var(--description-grey);
+}
+
+@mixin description-font-hover {
+	font-size: 18px;
+	color: var(--description-grey-hover);
+}

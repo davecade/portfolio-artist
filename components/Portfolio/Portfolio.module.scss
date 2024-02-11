@@ -1,4 +1,4 @@
-@import "../../styles/mixins";
+@import "@/styles/mixins";
 
 .container {
 	width: 100%;
@@ -8,7 +8,9 @@
 		width: 100%;
 
 		.description {
-			color: #aaa;
+			@include description-font;
+			width: 30rem;
+			text-align: center;
 		}
 	}
 }
