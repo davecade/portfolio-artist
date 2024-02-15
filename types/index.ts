@@ -4,3 +4,8 @@ export type Service = {
 	description: string;
 	image: string;
 };
+export type Project = {
+	id: string;
+	name: string;
+	image: string;
+};

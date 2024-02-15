@@ -1,16 +1,27 @@
 @import "@/styles/mixins";
 
 .container {
+	@include flex-center;
 	width: 100%;
-	.portfolio_heading_description_container {
-		@include flex-center;
-		flex-direction: column;
-		width: 100%;
+	.content {
+		width: 1360px;
 
-		.description {
-			@include description-font;
-			width: 30rem;
-			text-align: center;
+		.portfolio_heading_description_container {
+			@include flex-center;
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 5rem;
+
+			.description {
+				@include description-font;
+				width: 30rem;
+				text-align: center;
+			}
+		}
+
+		.portfolio_projects_container {
+			height: 984px;
+			border: 1px solid red;
 		}
 	}
 }
