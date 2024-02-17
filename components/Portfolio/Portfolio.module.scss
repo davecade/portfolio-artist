@@ -21,7 +21,29 @@
 
 		.portfolio_projects_container {
 			height: 984px;
-			border: 1px solid red;
+			@include flex-space-evenly;
+			flex-direction: column;
+
+			.top {
+				@include flex-space-evenly;
+
+				.top_right {
+					@include flex-space-evenly;
+					flex-direction: column;
+
+					.top_right_bottom {
+						@include flex-space-evenly;
+					}
+				}
+			}
+
+			.bottom {
+				@include flex-space-evenly;
+
+				.bottom_left {
+					@include flex-space-evenly;
+				}
+			}
 		}
 	}
 }
