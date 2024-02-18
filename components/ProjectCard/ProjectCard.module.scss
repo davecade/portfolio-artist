@@ -1,10 +1,27 @@
 .container {
 	overflow: hidden;
+	position: relative;
+	cursor: pointer;
 
 	.image {
 		transition: all 0.3s ease;
-		&:hover {
+	}
+
+	.action_link_container {
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+		transition: all 0.4s ease;
+		opacity: 0;
+	}
+
+	&:hover {
+		.image {
 			transform: scale(1.1);
+		}
+		.action_link_container {
+			opacity: 1;
+			transform: translate(0, -10px);
 		}
 	}
 }

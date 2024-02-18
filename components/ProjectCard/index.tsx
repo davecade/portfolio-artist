@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./ProjectCard.module.scss";
 import Image from "next/image";
+import ActionLink from "../ActionLink";
 
 type Props = {
 	size: "small" | "medium" | "large";
 	image: string;
+	onClick: () => void;
 };
 
-const ProjectCard = ({ size, image }: Props) => {
-
+const ProjectCard = ({ size, image, onClick }: Props) => {
 	const width = (() => {
 		switch (size) {
 			case "small":
@@ -35,9 +36,27 @@ const ProjectCard = ({ size, image }: Props) => {
 		}
 	})();
 
-	return <div className={styles.container}>
-		<Image className={styles.image} src={image} alt="project" width={width} height={height} />
-	</div>;
+	return (
+		<div
+			className={styles.container}
+			style={{
+				height,
+				width,
+			}}
+			onClick={onClick}
+		>
+			<Image
+				className={styles.image}
+				src={image}
+				alt="project"
+				width={width}
+				height={height}
+			/>
+			<div className={styles.action_link_container}>
+				<ActionLink text={"View Project"} onClick={onClick} bold />
+			</div>
+		</div>
+	);
 };
 
 export default ProjectCard;

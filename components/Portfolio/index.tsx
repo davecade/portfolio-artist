@@ -22,17 +22,27 @@ const Portfolio = () => {
 
 				<div className={styles.portfolio_projects_container}>
 					<div className={styles.top}>
-						<ProjectCard size={"large"} image={"/images/futuristic-city.jpg"} />
+						<ProjectCard
+							size={"large"}
+							image={"/images/futuristic-city.jpg"}
+							onClick={() => {}}
+						/>
 						<div className={styles.top_right}>
-							<ProjectCard size={"medium"} image={"/images/sunset-city.jpg"} />
+							<ProjectCard
+								size={"medium"}
+								image={"/images/sunset-city.jpg"}
+								onClick={() => {}}
+							/>
 							<div className={styles.top_right_bottom}>
 								<ProjectCard
 									size={"small"}
 									image={"/images/enchanted-forest.png"}
+									onClick={() => {}}
 								/>
 								<ProjectCard
 									size={"small"}
 									image={"/images/beautiful-woman.png"}
+									onClick={() => {}}
 								/>
 							</div>
 						</div>
@@ -42,13 +52,19 @@ const Portfolio = () => {
 							<ProjectCard
 								size={"small"}
 								image={"/images/enchanted-tree.png"}
+								onClick={() => {}}
 							/>
 							<ProjectCard
 								size={"small"}
 								image={"/images/space-exploration.png"}
+								onClick={() => {}}
 							/>
 						</div>
-						<ProjectCard size={"medium"} image={"/images/house-hill.jpg"} />
+						<ProjectCard
+							size={"medium"}
+							image={"/images/house-hill.jpg"}
+							onClick={() => {}}
+						/>
 					</div>
 				</div>
 			</div>
