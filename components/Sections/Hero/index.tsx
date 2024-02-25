@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
-import PageLink from "../PageLink";
-import Heading from "../Heading";
+import PageLink from "../../PageLink";
+import Heading from "../../Heading";
 
 function Hero() {
 	return (
 		<div className={styles.container}>
 			<Image
-				src="/images/illustratior-bg-hero.jpg"
+				src="/images/hero/illustratior-bg-hero.jpg"
 				alt="hero"
 				fill={true}
 				quality={100}

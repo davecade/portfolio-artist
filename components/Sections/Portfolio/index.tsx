@@ -1,7 +1,8 @@
 import React from "react";
-import Heading from "../Heading";
+import Heading from "../../Heading";
 import styles from "./Portfolio.module.scss";
-import ProjectCard from "../ProjectCard";
+import ProjectCard from "./ProjectCard";
+import PageLink from "../../PageLink";
 
 const Portfolio = () => {
 	return (
@@ -19,24 +20,24 @@ const Portfolio = () => {
 					<div className={styles.top}>
 						<ProjectCard
 							size={"large"}
-							image={"/images/futuristic-city.jpg"}
+							image={"/images/projects/futuristic-city.jpg"}
 							href={""}
 						/>
 						<div className={styles.top_right}>
 							<ProjectCard
 								size={"medium"}
-								image={"/images/sunset-city.jpg"}
+								image={"/images/projects/sunset-city.jpg"}
 								href={""}
 							/>
 							<div className={styles.top_right_bottom}>
 								<ProjectCard
 									size={"small"}
-									image={"/images/enchanted-forest.png"}
+									image={"/images/projects/enchanted-forest.png"}
 									href={""}
 								/>
 								<ProjectCard
 									size={"small"}
-									image={"/images/beautiful-woman.png"}
+									image={"/images/projects/beautiful-woman.png"}
 									href={""}
 								/>
 							</div>
@@ -46,21 +47,24 @@ const Portfolio = () => {
 						<div className={styles.bottom_left}>
 							<ProjectCard
 								size={"small"}
-								image={"/images/enchanted-tree.png"}
+								image={"/images/projects/enchanted-tree.png"}
 								href={""}
 							/>
 							<ProjectCard
 								size={"small"}
-								image={"/images/space-exploration.png"}
+								image={"/images/projects/space-exploration.png"}
 								href={""}
 							/>
 						</div>
 						<ProjectCard
 							size={"medium"}
-							image={"/images/house-hill.jpg"}
+							image={"/images/projects/house-hill.jpg"}
 							href={""}
 						/>
 					</div>
+				</div>
+				<div className={styles.all_projects_button_container}>
+					<PageLink text={"Browse All Projects"} href={""} />
 				</div>
 			</div>
 		</div>

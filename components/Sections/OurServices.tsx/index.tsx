@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Heading from "../Heading";
+import Heading from "../../Heading";
 import styles from "./OurServices.module.scss";
-import PageLink from "../PageLink";
-import ServiceCard from "../ServiceCard";
+import PageLink from "../../PageLink";
+import ServiceCard from "./ServiceCard";
 import { services } from "@/data";
 
 const MyServices = () => {

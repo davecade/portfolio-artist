@@ -1,0 +1,10 @@
+@import "@/styles/mixins";
+
+.container {
+	@include flex-center;
+
+	.border {
+		border: 1px solid var(--border-grey);
+		padding: 3rem;
+	}
+}

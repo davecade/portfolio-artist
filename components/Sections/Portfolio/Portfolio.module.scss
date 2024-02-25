@@ -3,6 +3,7 @@
 .container {
 	@include flex-center;
 	width: 100%;
+
 	.content {
 		width: 1360px;
 
@@ -44,6 +45,10 @@
 					@include flex-space-evenly;
 				}
 			}
+		}
+		.all_projects_button_container {
+			@include flex-center;
+			padding-top: 3rem;
 		}
 	}
 }

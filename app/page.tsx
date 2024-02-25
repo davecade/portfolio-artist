@@ -1,8 +1,9 @@
 import Head from "next/head";
-import Hero from "@/components/Hero";
-import MyServices from "@/components/OurServices.tsx";
-import Portfolio from "@/components/Portfolio";
+import Hero from "@/components/Sections/Hero";
+import MyServices from "@/components/Sections/OurServices.tsx";
+import Portfolio from "@/components/Sections/Portfolio";
 import Spacer from "@/components/Spacer/Spacer";
+import PastClients from "@/components/Sections/PastClients";
 
 export default function Home() {
 	return (
@@ -13,6 +14,8 @@ export default function Home() {
 			</Head>
 			<Hero />
 			<Spacer size="medium" />
+			<PastClients />
+			<Spacer size="xlarge" />
 			<MyServices />
 			<Spacer size="medium" />
 			<Portfolio />

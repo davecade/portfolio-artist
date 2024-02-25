@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "./ProjectCard.module.scss";
 import Image from "next/image";
-import PageLink from "../PageLink";
+import PageLink from "../../../PageLink";
 
 type Props = {
 	size: "small" | "medium" | "large";

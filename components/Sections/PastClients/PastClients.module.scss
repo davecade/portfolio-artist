@@ -1,0 +1,21 @@
+@import "@/styles/mixins";
+
+.container {
+	@include flex-center;
+	flex-direction: column;
+	width: 100%;
+
+	.heading {
+		font-size: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.description {
+		padding-bottom: 2rem;
+	}
+
+	.clients_container {
+		@include flex-center;
+		width: 100%;
+	}
+}

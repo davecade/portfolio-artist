@@ -9,3 +9,8 @@ export type Project = {
 	name: string;
 	image: string;
 };
+
+export type client = {
+	id: string;
+	image: string;
+};
