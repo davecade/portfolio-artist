@@ -1,11 +1,6 @@
-"use client";
-
 import React from "react";
 import Heading from "../Heading";
 import styles from "./Portfolio.module.scss";
-import ActionLink from "../ActionLink";
-import ServiceCard from "../ServiceCard";
-import { services } from "@/data";
 import ProjectCard from "../ProjectCard";
 
 const Portfolio = () => {
@@ -25,24 +20,24 @@ const Portfolio = () => {
 						<ProjectCard
 							size={"large"}
 							image={"/images/futuristic-city.jpg"}
-							onClick={() => {}}
+							href={""}
 						/>
 						<div className={styles.top_right}>
 							<ProjectCard
 								size={"medium"}
 								image={"/images/sunset-city.jpg"}
-								onClick={() => {}}
+								href={""}
 							/>
 							<div className={styles.top_right_bottom}>
 								<ProjectCard
 									size={"small"}
 									image={"/images/enchanted-forest.png"}
-									onClick={() => {}}
+									href={""}
 								/>
 								<ProjectCard
 									size={"small"}
 									image={"/images/beautiful-woman.png"}
-									onClick={() => {}}
+									href={""}
 								/>
 							</div>
 						</div>
@@ -52,18 +47,18 @@ const Portfolio = () => {
 							<ProjectCard
 								size={"small"}
 								image={"/images/enchanted-tree.png"}
-								onClick={() => {}}
+								href={""}
 							/>
 							<ProjectCard
 								size={"small"}
 								image={"/images/space-exploration.png"}
-								onClick={() => {}}
+								href={""}
 							/>
 						</div>
 						<ProjectCard
 							size={"medium"}
 							image={"/images/house-hill.jpg"}
-							onClick={() => {}}
+							href={""}
 						/>
 					</div>
 				</div>

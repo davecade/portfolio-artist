@@ -1,21 +1,23 @@
+"use client";
+
 import React, { useMemo } from "react";
 import { MdArrowOutward } from "react-icons/md";
-import styles from "./ActionLink.module.scss";
+import styles from "./PageLink.module.scss";
 
 type Props = {
 	text: string;
 	bold?: boolean;
 	marginLeft?: "small" | "medium" | "large" | "";
 	marginRight?: "small" | "medium" | "large" | "";
-	onClick: () => void;
+	href: string;
 };
 
-const ActionLink = ({
+const PageLink = ({
 	text,
 	bold = false,
 	marginLeft = "",
 	marginRight = "",
-	onClick,
+	href,
 }: Props) => {
 	const marginLeftStyles = useMemo(() => {
 		switch (marginLeft) {
@@ -43,9 +45,14 @@ const ActionLink = ({
 		}
 	}, [marginRight]);
 
+	const handleClick = () => {
+		// use href to navigate to the page
+		console.log("Navigating to: ", href);
+	};
+
 	return (
 		<div
-			onClick={onClick}
+			onClick={handleClick}
 			className={styles.action_link_container}
 			style={{
 				marginLeft: marginLeft ? marginLeftStyles : undefined,
@@ -66,4 +73,4 @@ const ActionLink = ({
 	);
 };
 
-export default ActionLink;
+export default PageLink;

@@ -1,15 +1,17 @@
+"use client";
+
 import React from "react";
 import styles from "./ProjectCard.module.scss";
 import Image from "next/image";
-import ActionLink from "../ActionLink";
+import PageLink from "../PageLink";
 
 type Props = {
 	size: "small" | "medium" | "large";
 	image: string;
-	onClick: () => void;
+	href: string;
 };
 
-const ProjectCard = ({ size, image, onClick }: Props) => {
+const ProjectCard = ({ size, image, href }: Props) => {
 	const width = (() => {
 		switch (size) {
 			case "small":
@@ -36,6 +38,11 @@ const ProjectCard = ({ size, image, onClick }: Props) => {
 		}
 	})();
 
+	const handleClick = () => {
+		// use onClick to navigate to the project
+		console.log("Navigating to: ", href);
+	};
+
 	return (
 		<div
 			className={styles.container}
@@ -43,7 +50,7 @@ const ProjectCard = ({ size, image, onClick }: Props) => {
 				height,
 				width,
 			}}
-			onClick={onClick}
+			onClick={handleClick}
 		>
 			<Image
 				className={styles.image}
@@ -53,7 +60,7 @@ const ProjectCard = ({ size, image, onClick }: Props) => {
 				height={height}
 			/>
 			<div className={styles.action_link_container}>
-				<ActionLink text={"View Project"} onClick={onClick} bold />
+				<PageLink text={"View Project"} href={""} bold />
 			</div>
 		</div>
 	);

@@ -1,9 +1,7 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
-import ActionLink from "../ActionLink";
+import PageLink from "../PageLink";
 import Heading from "../Heading";
 
 function Hero() {
@@ -29,17 +27,8 @@ function Hero() {
 					</p>
 				</div>
 				<div className={styles.action_link_container}>
-					<ActionLink
-						bold
-						text={"Contact Us"}
-						marginRight={"small"}
-						onClick={() => {}}
-					/>
-					<ActionLink
-						marginLeft={"small"}
-						text={"Browse Portfolio"}
-						onClick={() => {}}
-					/>
+					<PageLink bold text={"Contact Us"} marginRight={"small"} href={""} />
+					<PageLink marginLeft={"small"} text={"Browse Portfolio"} href={""} />
 				</div>
 			</main>
 		</div>

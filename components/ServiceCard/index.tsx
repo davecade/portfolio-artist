@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./ServiceCard.module.scss";
 import Image from "next/image";
@@ -7,12 +8,16 @@ type Props = {
 	image: string;
 	name: string;
 	description: string;
-	onClick: () => void;
+	href: string;
 };
 
-const ServiceCard = ({ image, name, description, onClick }: Props) => {
+const ServiceCard = ({ image, name, description, href }: Props) => {
+	const handleClick = () => {
+		// use href to navigate to the service
+		console.log("Navigating to: ", href);
+	};
 	return (
-		<div className={styles.service_container} onClick={onClick}>
+		<div className={styles.service_container} onClick={handleClick}>
 			<div className={styles.image_container}>
 				<Image
 					className={styles.image}
