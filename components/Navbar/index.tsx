@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./Navbar.module.scss"; // Assume you have some styles defined
 import mySvg from "@/public/logo-web-icon.svg";
 import Image from "next/image";
@@ -9,16 +11,18 @@ import {
 	FaLinkedin,
 	FaPatreon,
 } from "react-icons/fa";
+import HamburgerIcon from "../HamburgerIcon";
 
 const Navbar = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<nav className={styles.container}>
 			<div className={styles.container_inner}>
-				<div className={styles.hamburger_container}>
-					<div className={styles.hamburger_line}></div>
-					<div className={styles.hamburger_line}></div>
-					<div className={styles.hamburger_line}></div>
-				</div>
+				<HamburgerIcon
+					isActive={isOpen}
+					onClick={() => setIsOpen((prev) => !prev)}
+				/>
 				<div className={styles.logo_container}>
 					<Image src={mySvg} alt="My SVG" width={40} height={40} />
 				</div>

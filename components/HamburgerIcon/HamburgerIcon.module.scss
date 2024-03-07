@@ -1,0 +1,37 @@
+.hamburger_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 40px;
+	width: 50px;
+	transition: all 0.2s ease-in-out;
+	justify-self: start;
+	caret-color: transparent;
+
+	&:hover {
+		cursor: pointer;
+		transform: scale(0.9);
+	}
+
+	.hamburger_line {
+		height: 5px;
+		width: 100%;
+		background-color: var(--app-white);
+		transition: all 0.3s ease-out;
+	}
+
+	&.active {
+		div {
+			&:nth-child(1) {
+				transform: translate(0, 11px) rotate(135deg);
+			}
+			&:nth-child(2) {
+				transform: translate(0, 11px) rotate(225deg);
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translate(0, -15px) rotate(225deg);
+			}
+		}
+	}
+}

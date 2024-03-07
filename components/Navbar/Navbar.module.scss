@@ -14,27 +14,6 @@
 		max-width: 1360px;
 		margin: 0 auto;
 
-		.hamburger_container {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			height: 40px;
-			width: 50px;
-			transition: all 0.2s ease-in-out;
-			justify-self: start;
-
-			&:hover {
-				cursor: pointer;
-				transform: scale(0.9);
-			}
-
-			.hamburger_line {
-				height: 5px;
-				width: 100%;
-				background-color: var(--app-white);
-			}
-		}
-
 		.logo_container {
 			transition: all 0.2s ease-in-out;
 			justify-self: center;
