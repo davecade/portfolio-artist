@@ -1,44 +1,68 @@
 @import "@/styles/mixins";
 
 .container {
-	z-index: 999;
-	padding: 2rem 0;
-	border-bottom: 0.5px solid var(--app-white);
-	width: 100%;
-	position: absolute;
+	position: relative;
 
-	.container_inner {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		justify-items: stretch;
-		max-width: 1360px;
-		margin: 0 auto;
+	.closed_nav {
+		@include absoluteFullWidth;
+		z-index: 999;
+		padding: 2rem 0;
+		border-bottom: 0.5px solid var(--app-white);
+		height: 108px;
 
-		.logo_container {
-			transition: all 0.2s ease-in-out;
-			justify-self: center;
-			&:hover {
-				cursor: pointer;
-				transform: scale(0.9);
-			}
+		&.isOpen {
+			@include transitionEffect;
+			background-color: var(--background);
+			border-bottom-color: var(--background);
 		}
 
-		.social_media_container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			width: 200px;
-			margin-right: 2rem;
-			justify-self: end;
+		.closed_nav_inner {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-items: stretch;
+			max-width: 1360px;
+			margin: 0 auto;
 
-			.social_media {
-				transition: all 0.2s ease-in-out;
+			.logo_container {
+				@include transitionEffect;
+				justify-self: center;
 
 				&:hover {
 					cursor: pointer;
-					opacity: 0.5;
+					transform: scale(0.9);
 				}
 			}
+
+			.social_media_container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 200px;
+				margin-right: 2rem;
+				justify-self: end;
+
+				.social_media {
+					@include transitionEffect;
+
+					&:hover {
+						cursor: pointer;
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+
+	.menu {
+		@include absoluteFullWidth;
+		z-index: 1000;
+		@include transitionEffect;
+		height: 0;
+		top: 108px;
+
+		&.menu_open {
+			height: calc(100vh - 108px);
+			background-color: var(--background);
 		}
 	}
 }

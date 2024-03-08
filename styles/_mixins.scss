@@ -36,3 +36,12 @@
 	font-size: 18px;
 	color: var(--description-grey-hover);
 }
+
+@mixin absoluteFullWidth {
+	position: absolute;
+	width: 100%;
+}
+
+@mixin transitionEffect {
+	transition: all 0.2s ease-in-out;
+}
