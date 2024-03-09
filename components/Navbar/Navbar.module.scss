@@ -55,14 +55,87 @@
 
 	.menu {
 		@include absoluteFullWidth;
-		z-index: 1000;
 		@include transitionEffect;
-		height: 0;
+		@include flex-space-between;
+		flex-direction: column;
 		top: 108px;
+		height: 0;
+		z-index: 1000;
 
 		&.menu_open {
 			height: calc(100vh - 108px);
 			background-color: var(--background);
+
+			.menu_link_container {
+				.menu_item {
+					@include transitionEffect;
+					opacity: 1;
+				}
+			}
+
+			.contact_section {
+				@include transitionEffect;
+				@include flex-center;
+				opacity: 1;
+				.email_container,
+				.phone_container {
+					border-left: 1px solid var(--border-grey);
+					border-right: 1px solid var(--border-grey);
+					opacity: 1;
+					padding: 0 2rem;
+
+					.email,
+					.phone {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+
+		.menu_link_container {
+			@include flex-center;
+			flex-direction: column;
+			border: 1px;
+			height: 100%;
+
+			.menu_item {
+				@include transitionEffect;
+				opacity: 0;
+				color: var(--description-grey-hover);
+
+				&:hover {
+					@include transitionEffect;
+					cursor: pointer;
+					color: var(--app-white);
+				}
+			}
+		}
+
+		.contact_section {
+			@include flex-center;
+			width: 97%;
+			border-top: 1px solid var(--border-grey);
+			padding: 2.5rem 0;
+			opacity: 0;
+
+			.email_container,
+			.phone_container {
+				border-left: 1px solid var(--border-grey);
+				border-right: 1px solid var(--border-grey);
+				opacity: 0;
+				padding: 0 2rem;
+
+				.email,
+				.phone {
+					@include transitionEffect;
+					font-size: 1.5rem;
+				}
+
+				&:hover {
+					cursor: pointer;
+					color: var(--description-grey-hover);
+				}
+			}
 		}
 	}
 }

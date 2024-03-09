@@ -12,6 +12,8 @@ import {
 	FaPatreon,
 } from "react-icons/fa";
 import HamburgerIcon from "../HamburgerIcon";
+import PageLink from "../PageLink";
+import Spacer from "../Spacer/Spacer";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +39,54 @@ const Navbar = () => {
 					</div>
 				</div>
 			</div>
-			<div className={`${styles.menu} ${isOpen ? styles.menu_open : ""}`}></div>
+			<div className={`${styles.menu} ${isOpen ? styles.menu_open : ""}`}>
+				<div className={styles.menu_link_container}>
+					<PageLink
+						href="/"
+						text="Home"
+						className={styles.menu_item}
+						hideUnderline
+						bold
+						size="xxlarge"
+					/>
+					<Spacer size="small" />
+					<PageLink
+						href="/"
+						text="About"
+						className={styles.menu_item}
+						hideUnderline
+						bold
+						size="xxlarge"
+					/>
+					<Spacer size="small" />
+					<PageLink
+						href="/"
+						text="Portfolio"
+						className={styles.menu_item}
+						hideUnderline
+						bold
+						size="xxlarge"
+					/>
+					<Spacer size="small" />
+					<PageLink
+						href="/"
+						text="Contact"
+						className={styles.menu_item}
+						hideUnderline
+						bold
+						size="xxlarge"
+					/>
+				</div>
+				<div className={styles.contact_section}>
+					<div className={styles.email_container}>
+						<p className={styles.email}>hi@koispirit.com</p>
+					</div>
+
+					<div className={styles.phone_container}>
+						<p className={styles.phone}>04441232567</p>
+					</div>
+				</div>
+			</div>
 		</nav>
 	);
 };

@@ -10,6 +10,9 @@ type Props = {
 	marginLeft?: "small" | "medium" | "large" | "";
 	marginRight?: "small" | "medium" | "large" | "";
 	href: string;
+	className?: string;
+	hideUnderline?: boolean;
+	size?: "small" | "medium" | "large" | "xlarge" | "xxlarge";
 };
 
 const PageLink = ({
@@ -18,6 +21,9 @@ const PageLink = ({
 	marginLeft = "",
 	marginRight = "",
 	href,
+	className,
+	hideUnderline,
+	size,
 }: Props) => {
 	const marginLeftStyles = useMemo(() => {
 		switch (marginLeft) {
@@ -45,15 +51,48 @@ const PageLink = ({
 		}
 	}, [marginRight]);
 
+	const { arrowSize, textSize } = useMemo(() => {
+		switch (size) {
+			case "small":
+
+			case "medium":
+				return {
+					textSize: "1.3rem",
+					arrowSize: 30,
+				};
+			case "large":
+				return {
+					textSize: "2rem",
+					arrowSize: 40,
+				};
+			case "xlarge":
+				return {
+					textSize: "2.7rem",
+					arrowSize: 50,
+				};
+			case "xxlarge":
+				return {
+					textSize: "3rem",
+					arrowSize: 60,
+				};
+			default:
+				return {
+					textSize: "1.3rem",
+					arrowSize: 30,
+				};
+		}
+	}, [size]);
+
 	const handleClick = () => {
-		// use href to navigate to the page
 		console.log("Navigating to: ", href);
 	};
 
 	return (
 		<div
 			onClick={handleClick}
-			className={styles.action_link_container}
+			className={`${styles.action_link_container} ${
+				className ? className : ""
+			}`}
 			style={{
 				marginLeft: marginLeft ? marginLeftStyles : undefined,
 				marginRight: marginRight ? marginRightStyles : undefined,
@@ -62,13 +101,13 @@ const PageLink = ({
 			<div className={styles.action_link_content}>
 				<p
 					className={styles.action_link_text}
-					style={{ fontWeight: bold ? "bold" : undefined }}
+					style={{ fontWeight: bold ? "bold" : undefined, fontSize: textSize }}
 				>
 					{text}
 				</p>
-				<MdArrowOutward className={styles.action_link_icon} size={30} />
+				<MdArrowOutward className={styles.action_link_icon} size={arrowSize} />
 			</div>
-			<div className={styles.action_link_underline}></div>
+			{!hideUnderline && <div className={styles.action_link_underline}></div>}
 		</div>
 	);
 };
