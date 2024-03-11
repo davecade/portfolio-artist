@@ -4,6 +4,7 @@ import MyServices from "@/components/Sections/OurServices.tsx";
 import Portfolio from "@/components/Sections/Portfolio";
 import Spacer from "@/components/Spacer/Spacer";
 import PastClients from "@/components/Sections/PastClients";
+import OurProcess from "@/components/Sections/OurProcess";
 
 export default function Home() {
 	return (
@@ -19,6 +20,8 @@ export default function Home() {
 			<MyServices />
 			<Spacer size="medium" />
 			<Portfolio />
+			<Spacer size="medium" />
+			<OurProcess />
 		</>
 	);
 }
