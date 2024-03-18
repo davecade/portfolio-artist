@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ProcessCard.module.scss";
 
 type ProcessCardProps = {
-	rank: number;
+	rank: string;
 	title: string;
 	description: string;
 };

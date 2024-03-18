@@ -17,7 +17,13 @@ const OurProcess = () => {
 					</div>
 				</div>
 				<div style={{ width: "100%" }}>
-					<ProcessCard />
+					<ProcessCard
+						rank={"01"}
+						title={"Project idea"}
+						description={
+							"Lorem ipsum dolor sit amet consectetur amet at sed tristique rutrum eget neque rhoncus augue interdum eget id molestie bibendum metus fames eget sem habitant fermentum semper purus justo tellus est nibh tellus eget amet tincidunt nullam."
+						}
+					/>
 				</div>
 			</div>
 		</div>
