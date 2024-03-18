@@ -2,6 +2,7 @@ import Heading from "@/components/Heading";
 import React from "react";
 import styles from "./OurProcess.module.scss";
 import PageLink from "@/components/PageLink";
+import ProcessCard from "./ProcessCard";
 
 const OurProcess = () => {
 	return (
@@ -14,6 +15,9 @@ const OurProcess = () => {
 					<div className={styles.right_side}>
 						<PageLink text={"Contact me"} bold href={""} />
 					</div>
+				</div>
+				<div style={{ width: "100%" }}>
+					<ProcessCard />
 				</div>
 			</div>
 		</div>
