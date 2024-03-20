@@ -49,7 +49,7 @@ const Navbar = () => {
 						bold
 						size="xxlarge"
 					/>
-					<Spacer size="small" />
+					<Spacer gap="small" />
 					<PageLink
 						href="/"
 						text="About"
@@ -58,7 +58,7 @@ const Navbar = () => {
 						bold
 						size="xxlarge"
 					/>
-					<Spacer size="small" />
+					<Spacer gap="small" />
 					<PageLink
 						href="/"
 						text="Portfolio"
@@ -67,7 +67,7 @@ const Navbar = () => {
 						bold
 						size="xxlarge"
 					/>
-					<Spacer size="small" />
+					<Spacer gap="small" />
 					<PageLink
 						href="/"
 						text="Contact"

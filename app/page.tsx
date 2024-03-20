@@ -14,13 +14,13 @@ export default function Home() {
 				<meta name="description" content="Homepage of an Artist's Portfolio" />
 			</Head>
 			<Hero />
-			<Spacer size="medium" />
+			<Spacer gap="medium" />
 			<PastClients />
-			<Spacer size="xlarge" />
+			<Spacer gap="xlarge" />
 			<MyServices />
-			<Spacer size="medium" />
+			<Spacer gap="medium" />
 			<Portfolio />
-			<Spacer size="medium" />
+			<Spacer gap="medium" />
 			<OurProcess />
 		</>
 	);

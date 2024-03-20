@@ -1,11 +1,13 @@
 import React from "react";
 
 type Props = {
-	size: "small" | "medium" | "large" | "xlarge" | "xxlarge";
+	gap: "xsmall" | "small" | "medium" | "large" | "xlarge" | "xxlarge";
 };
 
-const Spacer = ({ size }: Props) => {
-	switch (size) {
+const Spacer = ({ gap }: Props) => {
+	switch (gap) {
+		case "xsmall":
+			return <div style={{ height: "1.5rem" }}></div>;
 		case "small":
 			return <div style={{ height: "3rem" }}></div>;
 		case "medium":
