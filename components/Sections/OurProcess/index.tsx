@@ -16,10 +16,24 @@ const OurProcess = () => {
 						<PageLink text={"Contact me"} bold href={""} />
 					</div>
 				</div>
-				<div style={{ width: "100%" }}>
+				<div className={styles.process_card_list}>
 					<ProcessCard
 						rank={"01"}
 						title={"Project idea"}
+						description={
+							"Lorem ipsum dolor sit amet consectetur amet at sed tristique rutrum eget neque rhoncus augue interdum eget id molestie bibendum metus fames eget sem habitant fermentum semper purus justo tellus est nibh tellus eget amet tincidunt nullam."
+						}
+					/>
+					<ProcessCard
+						rank={"02"}
+						title={"Brainstorming"}
+						description={
+							"Lorem ipsum dolor sit amet consectetur amet at sed tristique rutrum eget neque rhoncus augue interdum eget id molestie bibendum metus fames eget sem habitant fermentum semper purus justo tellus est nibh tellus eget amet tincidunt nullam."
+						}
+					/>
+					<ProcessCard
+						rank={"03"}
+						title={"Execution"}
 						description={
 							"Lorem ipsum dolor sit amet consectetur amet at sed tristique rutrum eget neque rhoncus augue interdum eget id molestie bibendum metus fames eget sem habitant fermentum semper purus justo tellus est nibh tellus eget amet tincidunt nullam."
 						}

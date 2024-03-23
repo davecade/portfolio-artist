@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styles from "./ProcessCard.module.scss";
 import { FaChevronDown } from "react-icons/fa";
 import Spacer from "@/components/Spacer/Spacer";
@@ -10,6 +10,14 @@ type ProcessCardProps = {
 };
 
 const ProcessCard = ({ rank, title, description }: ProcessCardProps) => {
+	const boxShaowStyles = useMemo(() => {
+		if (rank === "01") return styles.box_shadow_01;
+
+		if (rank === "02") return styles.box_shadow_02;
+
+		if (rank === "03") return styles.box_shadow_03;
+	}, [rank]);
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.left}>
