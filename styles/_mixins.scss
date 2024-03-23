@@ -45,3 +45,7 @@
 @mixin transitionEffect {
 	transition: all 0.2s ease-out;
 }
+
+@mixin backgroundGrey {
+	background-color: var(--background-grey);
+}

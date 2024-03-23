@@ -1,3 +1,5 @@
+"use client";
+
 import Heading from "@/components/Heading";
 import React from "react";
 import styles from "./OurProcess.module.scss";
@@ -23,6 +25,7 @@ const OurProcess = () => {
 						description={
 							"Lorem ipsum dolor sit amet consectetur amet at sed tristique rutrum eget neque rhoncus augue interdum eget id molestie bibendum metus fames eget sem habitant fermentum semper purus justo tellus est nibh tellus eget amet tincidunt nullam."
 						}
+						onClick={() => {}}
 					/>
 					<ProcessCard
 						rank={"02"}
@@ -30,6 +33,7 @@ const OurProcess = () => {
 						description={
 							"Lorem ipsum dolor sit amet consectetur amet at sed tristique rutrum eget neque rhoncus augue interdum eget id molestie bibendum metus fames eget sem habitant fermentum semper purus justo tellus est nibh tellus eget amet tincidunt nullam."
 						}
+						onClick={() => {}}
 					/>
 					<ProcessCard
 						rank={"03"}
@@ -37,6 +41,7 @@ const OurProcess = () => {
 						description={
 							"Lorem ipsum dolor sit amet consectetur amet at sed tristique rutrum eget neque rhoncus augue interdum eget id molestie bibendum metus fames eget sem habitant fermentum semper purus justo tellus est nibh tellus eget amet tincidunt nullam."
 						}
+						onClick={() => {}}
 					/>
 				</div>
 			</div>

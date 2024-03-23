@@ -3,11 +3,13 @@
 .container {
 	@include flex-space-between;
 	transition: all 0.3s ease;
-	width: 100%;
 	border-bottom: 1px solid #2f2f2f;
+	width: 100%;
 	padding: 4rem;
+	cursor: pointer;
 
 	.left {
+		width: 50%;
 		.left_content {
 			.rank {
 				font-size: 2rem;
@@ -20,13 +22,56 @@
 					padding-right: 2rem;
 				}
 				.chevron {
+					@include transitionEffect;
 					font-weight: 100;
 				}
 			}
 		}
 	}
 
+	.right {
+		width: 40%;
+		.right_content {
+			.description {
+				@include transitionEffect;
+				font-size: 18px;
+				font-weight: 500;
+				color: #a4a4a4;
+			}
+		}
+	}
+
 	&:hover {
 		transform: translateX(0.5rem);
+	}
+}
+
+.box_shadow_01 {
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+	//box-shadow: 0 2px 12px 0 red;
+}
+
+.box_shadow_02 {
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+}
+
+.box_shadow_03 {
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+	border-bottom: none;
+}
+
+.background_grey {
+	@include backgroundGrey;
+}
+
+.rotate_chevron {
+	transform: rotate(-90deg);
+}
+
+.close_description {
+	.right_content {
+		.description {
+			opacity: 0;
+		}
 	}
 }

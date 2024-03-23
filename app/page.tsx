@@ -22,6 +22,7 @@ export default function Home() {
 			<Portfolio />
 			<Spacer gap="medium" />
 			<OurProcess />
+			<Spacer gap="xlarge" />
 		</>
 	);
 }
