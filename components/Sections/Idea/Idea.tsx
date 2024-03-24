@@ -2,7 +2,15 @@ import Image from "next/image";
 import React from "react";
 import styles from "./Idea.module.scss";
 import Heading from "@/components/Heading";
+import {
+	FaFacebook,
+	FaInstagram,
+	FaLinkedin,
+	FaPatreon,
+	FaTwitter,
+} from "react-icons/fa";
 import PageLink from "@/components/PageLink";
+import Spacer from "@/components/Spacer/Spacer";
 
 const Idea = () => {
 	return (
@@ -22,26 +30,33 @@ const Idea = () => {
 					<div className={styles.heading_container}>
 						<Heading text={"Lets work."} size={"xlarge"} />
 					</div>
+					<Spacer gap="xsmall" />
+					<div className={styles.contact_section}>
+						<div className={styles.social_media_container}>
+							<FaPatreon className={styles.social_media} size={25} />
+							<FaLinkedin className={styles.social_media} size={25} />
+							<FaFacebook className={styles.social_media} size={25} />
+							<FaTwitter className={styles.social_media} size={25} />
+							<FaInstagram className={styles.social_media} size={25} />
+						</div>
+						<div className={styles.contact}>
+							<div className={styles.email_container}>
+								<p className={styles.email}>admin@pixelintelligence.com</p>
+							</div>
 
-					<div className={styles.title_description_container}>
-						<p className={styles.title_description}>
-							Lorem ipsum dolor sit amet consectetur in quisque varius eget
-							turpis sollicitudin purus arcu morbi lorem lacus sit in tellus
-							dolor eget.
-						</p>
-					</div>
-					<div className={styles.action_link_container}>
-						<PageLink
-							bold
-							text={"Contact Us"}
-							marginRight={"small"}
-							href={""}
-						/>
-						<PageLink
-							marginLeft={"small"}
-							text={"Browse Portfolio"}
-							href={""}
-						/>
+							<div className={styles.phone_container}>
+								<p className={styles.phone}>04441232567</p>
+							</div>
+							<div className={styles.link_container}>
+								<PageLink
+									bold
+									text={"Contact Us"}
+									marginLeft="medium"
+									hideUnderline
+									href={""}
+								/>
+							</div>
+						</div>
 					</div>
 				</main>
 			</div>

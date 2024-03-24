@@ -98,7 +98,11 @@ const PageLink = ({
 				marginRight: marginRight ? marginRightStyles : undefined,
 			}}
 		>
-			<div className={styles.action_link_content}>
+			<div
+				className={`${styles.action_link_content} ${
+					hideUnderline ? styles.no_padding : ""
+				}`}
+			>
 				<p
 					className={styles.action_link_text}
 					style={{ fontWeight: bold ? "bold" : undefined, fontSize: textSize }}

@@ -8,7 +8,7 @@ function Hero() {
 	return (
 		<div className={styles.container}>
 			<Image
-				src="/images/hero/illustratior-bg-hero.jpg"
+				src="/images/hero/illustratior-bg-hero-4.jpg"
 				alt="hero"
 				fill={true}
 				quality={100}

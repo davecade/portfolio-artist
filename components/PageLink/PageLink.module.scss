@@ -1,5 +1,9 @@
 @import "@/styles/mixins";
 
+.no_padding {
+	padding-bottom: 0;
+}
+
 .action_link_container {
 	width: fit-content;
 
@@ -10,6 +14,10 @@
 		.action_link_text {
 			font-size: 1.3rem;
 		}
+	}
+
+	.no_padding {
+		padding-bottom: 0;
 	}
 
 	.action_link_underline {
@@ -33,7 +41,7 @@
 		}
 
 		.action_link_underline {
-			opacity: 1;
+			display: none;
 		}
 	}
 }
