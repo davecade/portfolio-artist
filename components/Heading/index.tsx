@@ -3,7 +3,7 @@ import styles from "./Heading.module.scss";
 
 type Props = {
 	text: string;
-	size: "small" | "medium" | "large";
+	size: "small" | "medium" | "large" | "xlarge";
 	lineLeft?: boolean;
 	lineRight?: boolean;
 };
@@ -17,6 +17,8 @@ const Heading = ({ text, size, lineLeft, lineRight }: Props) => {
 				return "4rem";
 			case "large":
 				return "6rem";
+			case "xlarge":
+				return "8rem";
 			default:
 				return "1.5rem";
 		}
