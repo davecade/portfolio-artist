@@ -79,7 +79,7 @@ const Navbar = () => {
 				</div>
 				<div className={styles.contact_section}>
 					<div className={styles.email_container}>
-						<p className={styles.email}>hi@koispirit.com</p>
+						<p className={styles.email}>hi@pixelintelligence.com</p>
 					</div>
 
 					<div className={styles.phone_container}>
