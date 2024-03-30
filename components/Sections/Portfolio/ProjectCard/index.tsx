@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "./ProjectCard.module.scss";
+import "./ProjectCard.scss";
 import Image from "next/image";
 import PageLink from "../../../PageLink";
 
@@ -45,7 +45,7 @@ const ProjectCard = ({ size, image, href }: Props) => {
 
 	return (
 		<div
-			className={styles.container}
+			className="project_card_container"
 			style={{
 				height,
 				width,
@@ -53,13 +53,13 @@ const ProjectCard = ({ size, image, href }: Props) => {
 			onClick={handleClick}
 		>
 			<Image
-				className={styles.image}
+				className="image"
 				src={image}
 				alt="project"
 				width={width}
 				height={height}
 			/>
-			<div className={styles.action_link_container}>
+			<div className="action_link_container">
 				<PageLink text={"View Project"} href={""} bold />
 			</div>
 		</div>

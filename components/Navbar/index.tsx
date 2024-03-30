@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./Navbar.module.scss"; // Assume you have some styles defined
+import "./Navbar.scss"; // Assuming you have styles defined in Navbar.scss
 import mySvg from "@/public/logo-web-icon.svg";
 import Image from "next/image";
 import {
@@ -23,28 +23,28 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className={styles.container}>
-			<div className={`${styles.closed_nav} ${isOpen ? styles.isOpen : ""}`}>
-				<div className={styles.closed_nav_inner}>
+		<nav className="navbar_container">
+			<div className={`closed_nav ${isOpen ? "isOpen" : ""}`}>
+				<div className="closed_nav_inner">
 					<HamburgerIcon isActive={isOpen} onClick={handleMenuClick} />
-					<div className={styles.logo_container}>
+					<div className="logo_container">
 						<Image src={mySvg} alt="My SVG" width={40} height={40} />
 					</div>
-					<div className={styles.social_media_container}>
-						<FaPatreon className={styles.social_media} size={25} />
-						<FaLinkedin className={styles.social_media} size={25} />
-						<FaFacebook className={styles.social_media} size={25} />
-						<FaTwitter className={styles.social_media} size={25} />
-						<FaInstagram className={styles.social_media} size={25} />
+					<div className="social_media_container">
+						<FaPatreon className="social_media" size={25} />
+						<FaLinkedin className="social_media" size={25} />
+						<FaFacebook className="social_media" size={25} />
+						<FaTwitter className="social_media" size={25} />
+						<FaInstagram className="social_media" size={25} />
 					</div>
 				</div>
 			</div>
-			<div className={`${styles.menu} ${isOpen ? styles.menu_open : ""}`}>
-				<div className={styles.menu_link_container}>
+			<div className={`menu ${isOpen ? "menu_open" : ""}`}>
+				<div className="menu_link_container">
 					<PageLink
 						href="/"
 						text="Home"
-						className={styles.menu_item}
+						className="menu_item"
 						hideUnderline
 						bold
 						size="xxlarge"
@@ -53,7 +53,7 @@ const Navbar = () => {
 					<PageLink
 						href="/"
 						text="About"
-						className={styles.menu_item}
+						className="menu_item"
 						hideUnderline
 						bold
 						size="xxlarge"
@@ -62,7 +62,7 @@ const Navbar = () => {
 					<PageLink
 						href="/"
 						text="Portfolio"
-						className={styles.menu_item}
+						className="menu_item"
 						hideUnderline
 						bold
 						size="xxlarge"
@@ -71,19 +71,19 @@ const Navbar = () => {
 					<PageLink
 						href="/"
 						text="Contact"
-						className={styles.menu_item}
+						className="menu_item"
 						hideUnderline
 						bold
 						size="xxlarge"
 					/>
 				</div>
-				<div className={styles.contact_section}>
-					<div className={styles.email_container}>
-						<p className={styles.email}>hi@pixelintelligence.com</p>
+				<div className="contact_section">
+					<div className="email_container">
+						<p className="email">hi@pixelintelligence.com</p>
 					</div>
 
-					<div className={styles.phone_container}>
-						<p className={styles.phone}>04441232567</p>
+					<div className="phone_container">
+						<p className="phone">04441232567</p>
 					</div>
 				</div>
 			</div>

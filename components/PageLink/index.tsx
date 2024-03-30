@@ -2,7 +2,7 @@
 
 import React, { useMemo } from "react";
 import { MdArrowOutward } from "react-icons/md";
-import styles from "./PageLink.module.scss";
+import "./PageLink.scss";
 
 type Props = {
 	text: string;
@@ -54,7 +54,6 @@ const PageLink = ({
 	const { arrowSize, textSize } = useMemo(() => {
 		switch (size) {
 			case "small":
-
 			case "medium":
 				return {
 					textSize: "1.3rem",
@@ -90,28 +89,22 @@ const PageLink = ({
 	return (
 		<div
 			onClick={handleClick}
-			className={`${styles.action_link_container} ${
-				className ? className : ""
-			}`}
+			className={`page_link_container ${className ? className : ""}`}
 			style={{
 				marginLeft: marginLeft ? marginLeftStyles : undefined,
 				marginRight: marginRight ? marginRightStyles : undefined,
 			}}
 		>
-			<div
-				className={`${styles.action_link_content} ${
-					hideUnderline ? styles.no_padding : ""
-				}`}
-			>
+			<div className={`page_link_content ${hideUnderline ? "no_padding" : ""}`}>
 				<p
-					className={styles.action_link_text}
+					className="page_link_text"
 					style={{ fontWeight: bold ? "bold" : undefined, fontSize: textSize }}
 				>
 					{text}
 				</p>
-				<MdArrowOutward className={styles.action_link_icon} size={arrowSize} />
+				<MdArrowOutward className="page_link_icon" size={arrowSize} />
 			</div>
-			{!hideUnderline && <div className={styles.action_link_underline}></div>}
+			{!hideUnderline && <div className="page_link_underline"></div>}
 		</div>
 	);
 };

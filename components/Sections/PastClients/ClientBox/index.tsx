@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./ClientBox.module.scss";
+import "./ClientBox.scss";
 
 type Props = {
 	image: string;
@@ -8,10 +8,10 @@ type Props = {
 
 const ClientBox = ({ image }: Props) => {
 	return (
-		<div className={styles.container}>
-			<div className={styles.border}>
+		<div className="client_box_container">
+			<div className="border">
 				<Image
-					alt={"clients name and logo"}
+					alt={"client's name and logo"}
 					src={image}
 					width={100}
 					height={100}

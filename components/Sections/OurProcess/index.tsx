@@ -2,23 +2,23 @@
 
 import Heading from "@/components/Heading";
 import React from "react";
-import styles from "./OurProcess.module.scss";
+import "./OurProcess.scss";
 import PageLink from "@/components/PageLink";
 import ProcessCard from "./ProcessCard";
 
 const OurProcess = () => {
 	return (
-		<div className={styles.container}>
-			<div className={styles.content}>
-				<div className={styles.heading_action_link_container}>
-					<div className={styles.left_side}>
+		<div className="our_process_container">
+			<div className="content">
+				<div className="heading_action_link_container">
+					<div className="left_side">
 						<Heading text={"Our process"} size={"medium"} lineRight />
 					</div>
-					<div className={styles.right_side}>
+					<div className="right_side">
 						<PageLink text={"Contact me"} bold href={""} />
 					</div>
 				</div>
-				<div className={styles.process_card_list}>
+				<div className="process_card_list">
 					<ProcessCard
 						rank={"01"}
 						title={"Project idea"}

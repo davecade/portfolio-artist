@@ -1,24 +1,22 @@
 import React from "react";
-import styles from "./HamburgerIcon.module.scss";
+import "./HamburgerIcon.scss";
 
 type Props = {
-	isActive: boolean;
-	onClick: () => void;
+    isActive: boolean;
+    onClick: () => void;
 };
 
 const HamburgerIcon = ({ isActive, onClick }: Props) => {
-	return (
-		<div
-			className={`${styles.hamburger_container} ${
-				isActive ? styles.active : ""
-			}`}
-			onClick={onClick}
-		>
-			<div className={styles.hamburger_line}></div>
-			<div className={styles.hamburger_line}></div>
-			<div className={styles.hamburger_line}></div>
-		</div>
-	);
+    return (
+        <div
+            className={`hamburger_container ${isActive ? "active" : ""}`}
+            onClick={onClick}
+        >
+            <div className="hamburger_line"></div>
+            <div className="hamburger_line"></div>
+            <div className="hamburger_line"></div>
+        </div>
+    );
 };
 
 export default HamburgerIcon;

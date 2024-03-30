@@ -1,35 +1,35 @@
 import React from "react";
 import Heading from "../../Heading";
-import styles from "./Portfolio.module.scss";
+import "./Portfolio.scss";
 import ProjectCard from "./ProjectCard";
 import PageLink from "../../PageLink";
 
 const Portfolio = () => {
 	return (
-		<div className={styles.container}>
-			<div className={styles.content}>
-				<div className={styles.portfolio_heading_description_container}>
+		<div className="portfolio_container">
+			<div className="content">
+				<div className="portfolio_heading_description_container">
 					<Heading text={"Portfolio"} size={"medium"} lineRight lineLeft />
-					<p className={styles.description}>
+					<p className="description">
 						Lorem ipsum dolor sit amet consectetur in quisque varius eget turpis
 						sollicitudin purus arcu morbi lorem lacus sit.
 					</p>
 				</div>
 
-				<div className={styles.portfolio_projects_container}>
-					<div className={styles.top}>
+				<div className="portfolio_projects_container">
+					<div className="top">
 						<ProjectCard
 							size={"large"}
 							image={"/images/projects/futuristic-city.jpg"}
 							href={""}
 						/>
-						<div className={styles.top_right}>
+						<div className="top_right">
 							<ProjectCard
 								size={"medium"}
 								image={"/images/projects/sunset-city.jpg"}
 								href={""}
 							/>
-							<div className={styles.top_right_bottom}>
+							<div className="top_right_bottom">
 								<ProjectCard
 									size={"small"}
 									image={"/images/projects/enchanted-forest.png"}
@@ -43,8 +43,8 @@ const Portfolio = () => {
 							</div>
 						</div>
 					</div>
-					<div className={styles.bottom}>
-						<div className={styles.bottom_left}>
+					<div className="bottom">
+						<div className="bottom_left">
 							<ProjectCard
 								size={"small"}
 								image={"/images/projects/enchanted-tree.png"}
@@ -63,7 +63,7 @@ const Portfolio = () => {
 						/>
 					</div>
 				</div>
-				<div className={styles.all_projects_button_container}>
+				<div className="all_projects_button_container">
 					<PageLink text={"Browse All Projects"} href={""} />
 				</div>
 			</div>
