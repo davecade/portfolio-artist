@@ -1,4 +1,5 @@
 @import "@/styles/mixins";
+@import "@/components/Heading/Heading.scss";
 
 .hero_container {
 	position: relative;
@@ -36,6 +37,17 @@
 		width: 100%;
 		padding: 0 19rem;
 
+		@media screen and (max-width: 1400px) {
+			padding: 0 12rem;
+		}
+		@media screen and (max-width: 1000px) {
+			padding: 0 7rem;
+		}
+
+		@media screen and (max-width: 700px) {
+			padding: 0 3rem;
+		}
+
 		h1,
 		p {
 			color: var(--app-white);
@@ -46,8 +58,14 @@
 			@include flex-start;
 			width: 100%;
 			.heading_container.hero_heading {
+				@include component_heading_large;
+
 				@media screen and (max-width: 1400px) {
 					@include component_heading_medium;
+				}
+
+				@media screen and (max-width: 700px) {
+					@include component_heading_small;
 				}
 			}
 		}
@@ -85,6 +103,10 @@
 
 			@media screen and (max-width: 1400px) {
 				font-size: 3rem;
+			}
+
+			@media screen and (max-width: 700px) {
+				font-size: 1.5rem;
 			}
 		}
 
