@@ -45,6 +45,11 @@
 		.heading_container {
 			@include flex-start;
 			width: 100%;
+			.global_heading_container {
+				.heading_text {
+					color: red;
+				}
+			}
 		}
 
 		.title_first_line {

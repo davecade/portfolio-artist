@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Heading.module.scss";
+import "./Heading.scss";
 
 type Props = {
 	text: string;
@@ -51,10 +51,10 @@ const Heading = ({ text, size, lineLeft, lineRight }: Props) => {
 	})();
 
 	return (
-		<div className={styles.heading_container}>
+		<div className="heading_container">
 			{lineLeft && (
 				<div
-					className={styles.heading_line}
+					className="heading_line"
 					style={{
 						width: widthValue,
 						height: lineHeightValue,
@@ -62,7 +62,7 @@ const Heading = ({ text, size, lineLeft, lineRight }: Props) => {
 				></div>
 			)}
 			<h1
-				className={styles.heading_text}
+				className="heading_text"
 				style={{
 					fontSize: fontSizeValue,
 					paddingRight: lineRight ? "2rem" : undefined,
@@ -73,7 +73,7 @@ const Heading = ({ text, size, lineLeft, lineRight }: Props) => {
 			</h1>
 			{lineRight && (
 				<div
-					className={styles.heading_line}
+					className="heading_line"
 					style={{
 						width: widthValue,
 						height: lineHeightValue,

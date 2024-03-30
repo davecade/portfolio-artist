@@ -126,6 +126,8 @@
 				width: 200px;
 				margin-right: 2rem;
 				justify-self: start;
+				border-left: 1px solid var(--border-grey);
+				border-right: 1px solid var(--border-grey);
 
 				.social_media {
 					@include transitionEffect;
@@ -147,7 +149,7 @@
 					border-left: 1px solid var(--border-grey);
 					border-right: 1px solid var(--border-grey);
 					opacity: 1;
-					padding: 0 2rem;
+					padding: 0 1rem;
 
 					.email,
 					.phone {

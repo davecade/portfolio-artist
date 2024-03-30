@@ -10,6 +10,10 @@
 		border-bottom: 0.5px solid var(--app-white);
 		height: 108px;
 
+		@media (max-width: 1400px) {
+			padding: 2rem 2rem;
+		}
+
 		&.isOpen {
 			@include transitionEffect;
 			background-color: var(--background);

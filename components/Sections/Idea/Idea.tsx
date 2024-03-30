@@ -41,7 +41,7 @@ const Idea = () => {
 						</div>
 						<div className={styles.contact}>
 							<div className={styles.email_container}>
-								<p className={styles.email}>admin@pixelintelligence.com</p>
+								<p className={styles.email}>admin@pixelint.com</p>
 							</div>
 
 							<div className={styles.phone_container}>

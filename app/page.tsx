@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Hero from "@/components/Sections/Hero";
 import MyServices from "@/components/Sections/OurServices.tsx";
 import Portfolio from "@/components/Sections/Portfolio";
@@ -9,11 +8,7 @@ import Idea from "@/components/Sections/Idea/Idea";
 
 export default function Home() {
 	return (
-		<>
-			<Head>
-				<title>Portfolio Artist</title>
-				<meta name="description" content="Homepage of an Artist's Portfolio" />
-			</Head>
+		<main>
 			<Hero />
 			<Spacer gap="medium" />
 			<PastClients />
@@ -25,6 +20,6 @@ export default function Home() {
 			<OurProcess />
 			<Spacer gap="xlarge" />
 			<Idea />
-		</>
+		</main>
 	);
 }
