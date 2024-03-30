@@ -1,6 +1,6 @@
 @import "@/styles/mixins";
 
-.container {
+.our_services_container {
 	@include flex-center;
 	width: 100%;
 
@@ -16,6 +16,10 @@
 
 			.left_side {
 				width: 50%;
+
+				.our_services_left_side_heading {
+					@include component_heading_medium;
+				}
 			}
 
 			.right_side {
@@ -24,7 +28,7 @@
 			}
 		}
 
-		.services_container {
+		.services_list {
 			@include flex-start;
 			width: 100%;
 			flex-wrap: wrap;

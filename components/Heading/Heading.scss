@@ -1,3 +1,5 @@
+@import "@/styles/mixins";
+
 .heading_container {
 	display: flex;
 	justify-content: flex-start;
@@ -10,4 +12,6 @@
 	.heading_line {
 		background-color: var(--app-white);
 	}
+
+	@include component_heading_large;
 }

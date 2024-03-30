@@ -1,3 +1,4 @@
+// -- Global Mixins -- //
 @mixin flex-center {
 	display: flex;
 	justify-content: center;
@@ -49,3 +50,48 @@
 @mixin backgroundGrey {
 	background-color: var(--background-grey);
 }
+
+// -- Heading Component Mixins -- //
+@mixin component_heading_small {
+	.heading_text {
+		font-size: 2rem;
+	}
+
+	.heading_line {
+		width: 5rem;
+		height: 0.1rem;
+	}
+}
+
+@mixin component_heading_medium {
+	.heading_text {
+		font-size: 4rem;
+	}
+
+	.heading_line {
+		width: 10rem;
+		height: 0.3rem;
+	}
+}
+@mixin component_heading_large {
+	.heading_text {
+		font-size: 6rem;
+	}
+
+	.heading_line {
+		width: 15rem;
+		height: 0.4rem;
+	}
+}
+
+@mixin component_heading_xlarge {
+	.heading_text {
+		font-size: 8rem;
+	}
+
+	.heading_line {
+		width: 20rem;
+		height: 0.5rem;
+	}
+}
+// -- END -- //

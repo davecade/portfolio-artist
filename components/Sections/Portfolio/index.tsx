@@ -9,7 +9,7 @@ const Portfolio = () => {
 		<div className="portfolio_container">
 			<div className="content">
 				<div className="portfolio_heading_description_container">
-					<Heading text={"Portfolio"} size={"medium"} lineRight lineLeft />
+					<Heading text={"Portfolio"} lineRight lineLeft className="portfolio_heading" />
 					<p className="description">
 						Lorem ipsum dolor sit amet consectetur in quisque varius eget turpis
 						sollicitudin purus arcu morbi lorem lacus sit.

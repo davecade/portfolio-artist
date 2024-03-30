@@ -24,10 +24,10 @@ const Idea = () => {
 			/>
 			<main className="main_idea_content">
 				<div className="heading_container">
-					<Heading text={"Have an idea?"} size={"medium"} lineRight />
+					<Heading text={"Have an idea?"} lineRight className="have_an_idea" />
 				</div>
 				<div className="heading_container">
-					<Heading text={"Lets work."} size={"xlarge"} />
+					<Heading text={"Lets work."} className="lets_work" />
 				</div>
 				<Spacer gap="xsmall" />
 				<div className="contact_section">

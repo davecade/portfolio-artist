@@ -16,6 +16,9 @@
 
 			.left_side {
 				width: 50%;
+				.our_process_left_side_heading {
+					@include component_heading_medium;
+				}
 			}
 
 			.right_side {

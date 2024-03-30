@@ -17,7 +17,7 @@ function Hero() {
 			/>
 			<main className="main_hero_content">
 				<div className="hero_heading_container">
-					<Heading text={"Pixel Intel"} size={"large"} lineRight />
+					<Heading text={"Pixel Intel"} lineRight className="hero_heading" />
 				</div>
 				<h2 className="title_service">AI Art Generation</h2>
 				<div className="title_description_container">

@@ -12,7 +12,7 @@ const OurProcess = () => {
 			<div className="content">
 				<div className="heading_action_link_container">
 					<div className="left_side">
-						<Heading text={"Our process"} size={"medium"} lineRight />
+						<Heading text={"Our process"} lineRight className="our_process_left_side_heading" />
 					</div>
 					<div className="right_side">
 						<PageLink text={"Contact me"} bold href={""} />

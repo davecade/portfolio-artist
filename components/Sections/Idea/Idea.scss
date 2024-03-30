@@ -60,6 +60,14 @@
 		.heading_container {
 			@include flex-start;
 			width: 100%;
+
+			&.have_an_idea {
+				@include component_heading_medium;
+			}
+
+			&.lets_work {
+				@include component_heading_xlarge;
+			}
 		}
 
 		.title_first_line {
