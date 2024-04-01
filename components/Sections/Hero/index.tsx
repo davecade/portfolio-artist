@@ -7,14 +7,16 @@ import Heading from "../../Heading";
 function Hero() {
 	return (
 		<div className="hero_container">
-			<Image
-				src="/images/hero/illustratior-bg-hero-4.jpg"
-				alt="hero"
-				fill={true}
-				quality={100}
-				className="hero_image"
-				style={{ objectFit: "cover" }}
-			/>
+			<div className="image_container">
+				<Image
+					src="/images/hero/illustratior-bg-hero-4.jpg"
+					alt="hero"
+					quality={100}
+					fill
+					className="hero_image"
+				/>
+			</div>
+
 			<main className="main_hero_content">
 				<div className="hero_heading_container">
 					<Heading text={"Pixel Intel"} lineRight className="hero_heading" />

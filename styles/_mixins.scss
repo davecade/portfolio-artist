@@ -53,14 +53,37 @@
 
 // -- Heading Component Mixins -- //
 // Component Location: components/Sections/Hero/Hero.scss
-@mixin component_heading_small {
+
+@mixin component_heading_xxsmall {
+	.heading_text {
+		font-size: 1.5rem;
+	}
+
+	.heading_line {
+		width: 3rem;
+		height: 0.1rem;
+	}
+}
+
+@mixin component_heading_xsmall {
 	.heading_text {
 		font-size: 2rem;
 	}
 
 	.heading_line {
-		width: 5rem;
+		width: 3rem;
 		height: 0.1rem;
+	}
+}
+
+@mixin component_heading_small {
+	.heading_text {
+		font-size: 3rem;
+	}
+
+	.heading_line {
+		width: 6rem;
+		height: 0.2rem;
 	}
 }
 
