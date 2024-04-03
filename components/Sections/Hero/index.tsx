@@ -29,8 +29,19 @@ function Hero() {
 					</p>
 				</div>
 				<div className="action_link_container">
-					<PageLink bold text={"Contact Us"} marginRight={"small"} href={""} />
-					<PageLink marginLeft={"small"} text={"Browse Portfolio"} href={""} />
+					<PageLink
+						className={"hero_contact_button"}
+						bold
+						text={"Contact Us"}
+						marginRight={"small"}
+						href={""}
+					/>
+					<PageLink
+						className={"hero_browse_button"}
+						marginLeft={"small"}
+						text={"Browse Portfolio"}
+						href={""}
+					/>
 				</div>
 			</main>
 		</div>

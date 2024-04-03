@@ -28,11 +28,11 @@ const PageLink = ({
 	const marginLeftStyles = useMemo(() => {
 		switch (marginLeft) {
 			case "small":
-				return "1rem";
+				return "margin_left_small";
 			case "medium":
-				return "2rem";
+				return "margin_left_medium";
 			case "large":
-				return "3rem";
+				return "margin_left_large";
 			default:
 				return undefined;
 		}
@@ -41,42 +41,37 @@ const PageLink = ({
 	const marginRightStyles = useMemo(() => {
 		switch (marginRight) {
 			case "small":
-				return "1rem";
+				return "margin_right_small";
 			case "medium":
-				return "2rem";
+				return "margin_right_small";
 			case "large":
-				return "3rem";
+				return "margin_right_small";
 			default:
 				return undefined;
 		}
 	}, [marginRight]);
 
-	const { arrowSize, textSize } = useMemo(() => {
+	const { arrowSize } = useMemo(() => {
 		switch (size) {
 			case "small":
 			case "medium":
 				return {
-					textSize: "1.3rem",
 					arrowSize: 30,
 				};
 			case "large":
 				return {
-					textSize: "2rem",
 					arrowSize: 40,
 				};
 			case "xlarge":
 				return {
-					textSize: "2.7rem",
 					arrowSize: 50,
 				};
 			case "xxlarge":
 				return {
-					textSize: "3rem",
 					arrowSize: 60,
 				};
 			default:
 				return {
-					textSize: "1.3rem",
 					arrowSize: 30,
 				};
 		}
@@ -89,19 +84,12 @@ const PageLink = ({
 	return (
 		<div
 			onClick={handleClick}
-			className={`page_link_container ${className ? className : ""}`}
-			style={{
-				marginLeft: marginLeft ? marginLeftStyles : undefined,
-				marginRight: marginRight ? marginRightStyles : undefined,
-			}}
+			className={`page_link_container ${marginLeft ? marginLeftStyles : ""} ${
+				marginRight ? marginRightStyles : ""
+			} ${className ? className : ""}`}
 		>
 			<div className={`page_link_content ${hideUnderline ? "no_padding" : ""}`}>
-				<p
-					className="page_link_text"
-					style={{ fontWeight: bold ? "bold" : undefined, fontSize: textSize }}
-				>
-					{text}
-				</p>
+				<p className={`page_link_text ${bold ? "bold" : ""}`}>{text}</p>
 				<MdArrowOutward className="page_link_icon" size={arrowSize} />
 			</div>
 			{!hideUnderline && <div className="page_link_underline"></div>}

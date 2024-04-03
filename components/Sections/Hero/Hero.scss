@@ -28,8 +28,6 @@
 		.hero_image {
 			z-index: 0;
 			object-fit: cover;
-			// width: 100%; /* makes the image responsive */
-			// height: auto; /* maintains aspect ratio */
 		}
 	}
 
@@ -53,6 +51,10 @@
 
 		@media screen and (max-width: 700px) {
 			padding: 0 3rem;
+		}
+
+		@media screen and (max-width: 470px) {
+			padding: 0 1rem;
 		}
 
 		h1,
@@ -121,7 +123,7 @@
 			}
 
 			@media screen and (max-width: 750px) {
-				font-size: 1.5rem;
+				font-size: 1.6rem;
 			}
 
 			@media screen and (max-width: 350px) {
@@ -145,7 +147,7 @@
 					font-size: 1rem;
 				}
 				@media screen and (max-width: 750px) {
-					font-size: 0.7rem;
+					font-size: 0.75rem;
 					line-height: 1rem;
 				}
 
@@ -166,6 +168,47 @@
 			width: 100%;
 			@include flex-start;
 			flex-direction: row;
+
+			.page_link_container.hero_contact_button {
+				@media screen and (max-width: 470px) {
+					width: 100%;
+					margin: 0;
+				}
+				.page_link_content {
+					@media screen and (max-width: 470px) {
+						justify-content: space-between;
+					}
+					.page_link_text {
+						@media screen and (max-width: 750px) {
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+
+			.page_link_container.hero_browse_button {
+				@media screen and (max-width: 470px) {
+					width: 100%;
+					margin: 0;
+				}
+				.page_link_content {
+					@media screen and (max-width: 470px) {
+						justify-content: space-between;
+					}
+
+					.page_link_text {
+						@media screen and (max-width: 750px) {
+							font-weight: normal;
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: 470px) {
+				flex-direction: column;
+				margin: 0;
+			}
 		}
 	}
 }
