@@ -22,12 +22,13 @@
 	}
 
 	.heading_text {
+		font-size: 6rem;
 		color: -var(--app-white);
 	}
 
 	.heading_line {
+		width: 15rem;
+		height: 0.4rem;
 		background-color: var(--app-white);
 	}
-
-	@include component_heading_large;
 }

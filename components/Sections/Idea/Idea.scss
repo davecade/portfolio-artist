@@ -66,7 +66,14 @@
 			}
 
 			&.lets_work {
-				@include component_heading_xlarge;
+				.heading_text {
+					font-size: 8rem;
+				}
+
+				.heading_line {
+					width: 20rem;
+					height: 0.5rem;
+				}
 			}
 		}
 
