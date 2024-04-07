@@ -13,6 +13,7 @@ type Props = {
 	className?: string;
 	hideUnderline?: boolean;
 	size?: "small" | "medium" | "large" | "xlarge" | "xxlarge";
+	arrowSizeOverride?: number | null | undefined;
 };
 
 const PageLink = ({
@@ -24,6 +25,7 @@ const PageLink = ({
 	className,
 	hideUnderline,
 	size,
+	arrowSizeOverride,
 }: Props) => {
 	const marginLeftStyles = useMemo(() => {
 		switch (marginLeft) {
@@ -52,6 +54,12 @@ const PageLink = ({
 	}, [marginRight]);
 
 	const { arrowSize } = useMemo(() => {
+		if (arrowSizeOverride) {
+			return {
+				arrowSize: arrowSizeOverride,
+			};
+		}
+
 		switch (size) {
 			case "small":
 			case "medium":
@@ -75,7 +83,7 @@ const PageLink = ({
 					arrowSize: 30,
 				};
 		}
-	}, [size]);
+	}, [size, arrowSizeOverride]);
 
 	const handleClick = () => {
 		console.log("Navigating to: ", href);

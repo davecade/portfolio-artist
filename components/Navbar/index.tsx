@@ -26,7 +26,7 @@ const Navbar = () => {
 		<nav className="navbar_container">
 			<div className={`closed_nav ${isOpen ? "isOpen" : ""}`}>
 				<div className="closed_nav_inner">
-					<HamburgerIcon isActive={isOpen} onClick={handleMenuClick} />
+					<HamburgerIcon isActive={isOpen} onClick={handleMenuClick} className="navbar_hamburger_icon" />
 					<div className="logo_container">
 						<Image src={mySvg} alt="My SVG" width={40} height={40} />
 					</div>

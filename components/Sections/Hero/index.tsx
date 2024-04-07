@@ -1,10 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useMemo } from "react";
 import Image from "next/image";
 import "./Hero.scss";
 import PageLink from "../../PageLink";
 import Heading from "../../Heading";
+import useWindowWidth from "@/hooks/useWindowWidth";
 
 function Hero() {
+	const windowWidth = useWindowWidth();
+
+	const arrowSize = useMemo(() => {
+		if (windowWidth < 750) return 20;
+
+		return null;
+	}, [windowWidth]);
+
 	return (
 		<div className="hero_container">
 			<div className="image_container">
@@ -35,12 +46,14 @@ function Hero() {
 						text={"Contact Us"}
 						marginRight={"small"}
 						href={""}
+						arrowSizeOverride={arrowSize}
 					/>
 					<PageLink
 						className={"hero_browse_button"}
 						marginLeft={"small"}
 						text={"Browse Portfolio"}
 						href={""}
+						arrowSizeOverride={arrowSize}
 					/>
 				</div>
 			</main>

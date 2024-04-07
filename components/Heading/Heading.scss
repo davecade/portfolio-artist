@@ -1,5 +1,10 @@
 @import "@/styles/mixins";
 
+.line_right_padding,
+.line_left_padding {
+	padding-right: 2rem;
+}
+
 .heading_container {
 	display: flex;
 	justify-content: flex-start;

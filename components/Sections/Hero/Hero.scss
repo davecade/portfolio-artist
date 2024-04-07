@@ -2,6 +2,7 @@
 
 .hero_container {
 	position: relative;
+	min-height: 700px;
 	height: 100vh;
 	width: 100%;
 
@@ -22,6 +23,7 @@
 	}
 	.image_container {
 		position: absolute;
+		min-height: 700px;
 		height: 100vh;
 		width: 100%;
 
@@ -49,7 +51,7 @@
 			padding: 0 7rem;
 		}
 
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 600px) {
 			padding: 0 3rem;
 		}
 
@@ -69,19 +71,59 @@
 
 			.heading_container.hero_heading {
 				@media screen and (max-width: 1400px) {
-					@include component_heading_medium;
+					.heading_text {
+						font-size: 4rem;
+					}
+
+					.heading_line {
+						width: 10rem;
+						height: 0.3rem;
+					}
 				}
 
 				@media screen and (max-width: 750px) {
-					@include component_heading_small;
+					.heading_text {
+						font-size: 3.8rem;
+					}
+
+					.heading_line {
+						width: 6rem;
+						height: 0.2rem;
+					}
+				}
+
+				@media screen and (max-width: 670px) {
+					.heading_text {
+						font-size: 3.3rem;
+					}
+
+					.heading_line {
+						width: 6rem;
+						height: 0.2rem;
+					}
 				}
 
 				@media screen and (max-width: 470px) {
-					@include component_heading_xsmall;
+					.heading_text {
+						font-size: 2rem;
+						padding-right: 1rem;
+					}
+
+					.heading_line {
+						width: 3rem;
+						height: 0.1rem;
+					}
 				}
 
 				@media screen and (max-width: 350px) {
-					@include component_heading_xxsmall;
+					.heading_text {
+						font-size: 2rem;
+					}
+
+					.heading_line {
+						width: 2rem;
+						height: 0.1rem;
+					}
 				}
 			}
 		}
@@ -123,7 +165,11 @@
 			}
 
 			@media screen and (max-width: 750px) {
-				font-size: 1.6rem;
+				font-size: 2rem;
+			}
+
+			@media screen and (max-width: 670px) {
+				font-size: 1.8rem;
 			}
 
 			@media screen and (max-width: 350px) {
@@ -147,12 +193,13 @@
 					font-size: 1rem;
 				}
 				@media screen and (max-width: 750px) {
-					font-size: 0.75rem;
-					line-height: 1rem;
+					font-size: 0.9rem;
+					line-height: 1.5rem;
+					width: 80%;
 				}
 
 				@media screen and (max-width: 470px) {
-					width: 75%;
+					width: 100%;
 				}
 			}
 

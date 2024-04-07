@@ -13,11 +13,9 @@ const Heading = ({ text, lineLeft, lineRight, className = "" }: Props) => {
 		<div className={`heading_container ${className}`}>
 			{lineLeft && <div className="heading_line"></div>}
 			<h1
-				className="heading_text"
-				style={{
-					paddingRight: lineRight ? "2rem" : undefined,
-					paddingLeft: lineLeft ? "2rem" : undefined,
-				}}
+				className={`heading_text ${lineLeft ? "line_left_padding" : ""} ${
+					lineRight ? "line_right_padding" : ""
+				}`}
 			>
 				{text}
 			</h1>

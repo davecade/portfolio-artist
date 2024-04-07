@@ -27,6 +27,17 @@
 			max-width: 1360px;
 			margin: 0 auto;
 
+			.navbar_hamburger_icon.hamburger_container {
+				@media (max-width: 750px) {
+					.hamburger_line {
+						height: 3px;
+						width: 80%;
+						background-color: var(--app-white);
+						transition: all 0.3s ease-out;
+					}
+				}
+			}
+
 			.logo_container {
 				@include transitionEffect;
 				justify-self: center;
