@@ -1,8 +1,11 @@
 @import "@/styles/mixins";
 
-.line_right_padding,
-.line_left_padding {
+.line_right_padding {
 	padding-right: 2rem;
+}
+
+.line_left_padding {
+	padding-left: 2rem;
 }
 
 .heading_container {
