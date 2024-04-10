@@ -3,55 +3,65 @@
 .past_clients_container {
 	@include flex-center;
 	flex-direction: column;
-	width: 100%;
 	padding: 0 1rem;
 
-	.heading {
-		font-size: 2rem;
-		padding-bottom: 2rem;
-	}
-
-	.description {
-		padding-bottom: 2rem;
-	}
-
-	.clients_container {
+	.past_clients_content {
 		@include flex-center;
+		flex-direction: column;
 		width: 100%;
+		max-width: 1360px;
 
-		.aaa {
-			@include flex-center;
-			width: 100%;
-			flex-direction: column;
+		.heading {
+			font-size: 2rem;
+			padding-bottom: 2rem;
+		}
 
-			.bbb {
-				@include flex-center;
-				width: 100%;
-			}
+		.description {
+			padding-bottom: 2rem;
 
-			.ccc {
-				@include flex-center;
-				width: 100%;
+			@media screen and (max-width: 470px) {
+				text-align: center;
 			}
 		}
 
-		.ddd {
+		.clients_container {
 			@include flex-center;
 			width: 100%;
-			flex-direction: column;
 
-			.eee {
+			.aaa {
 				@include flex-center;
 				width: 100%;
+				flex-direction: column;
+
+				.bbb {
+					@include flex-center;
+					width: 100%;
+				}
+
+				.ccc {
+					@include flex-center;
+					width: 100%;
+				}
 			}
 
-			.fff {
+			.ddd {
 				@include flex-center;
 				width: 100%;
-			}
-			.ggg {
-				@include flex-center;
-				width: 100%;
+				flex-direction: column;
+
+				.eee {
+					@include flex-center;
+					width: 100%;
+				}
+
+				.fff {
+					@include flex-center;
+					width: 100%;
+				}
+				.ggg {
+					@include flex-center;
+					width: 100%;
+				}
 			}
 		}
 	}

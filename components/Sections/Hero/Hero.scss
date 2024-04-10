@@ -1,10 +1,12 @@
 @import "@/styles/mixins";
 
 .hero_container {
-	position: relative;
+	@include flex-center;
+	// position: relative;
 	min-height: 700px;
 	height: 100vh;
-	width: 100%;
+	// width: 100%;
+	border: 1px solid green;
 
 	&::before {
 		content: "";
@@ -19,13 +21,13 @@
 			rgba(6, 6, 6, 0.4) 30%,
 			rgba(6, 6, 6, 0.2) 100%
 		);
-		z-index: 1; // Ensure this is above the image but below the content
+		z-index: 1;
 	}
 	.image_container {
-		position: absolute;
-		min-height: 700px;
-		height: 100vh;
-		width: 100%;
+		// position: absolute;
+		// min-height: 700px;
+		// height: 100vh;
+		// width: 100%;
 
 		.hero_image {
 			z-index: 0;
@@ -34,15 +36,13 @@
 	}
 
 	.main_hero_content {
-		position: absolute;
-		z-index: 2;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex-center;
+		// position: absolute;
 		flex-direction: column;
-		height: 100%;
 		width: 100%;
-		padding: 0 19rem;
+		max-width: 1360px;
+		height: 100%;
+		z-index: 2;
 
 		@media screen and (max-width: 1400px) {
 			padding: 0 12rem;
@@ -55,7 +55,7 @@
 			padding: 0 3rem;
 		}
 
-		@media screen and (max-width: 470px) {
+		@media screen and (max-width: 480px) {
 			padding: 0 1rem;
 		}
 
@@ -130,9 +130,7 @@
 
 		.title_first_line {
 			width: 100%;
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
+			@include flex-start;
 
 			.title_company {
 				font-size: 6rem;
