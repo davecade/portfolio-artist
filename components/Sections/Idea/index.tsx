@@ -15,13 +15,16 @@ import Spacer from "@/components/Spacer/Spacer";
 const Idea = () => {
 	return (
 		<div className="idea_container">
-			<Image
-				src="/images/idea/illustrator_forest.jpg"
-				className="idea_image"
-				fill
-				quality={100}
-				alt="idea"
-			/>
+			<div className="image_container">
+				<Image
+					src="/images/idea/illustrator_forest.jpg"
+					className="idea_image"
+					fill
+					quality={100}
+					priority
+					alt="idea"
+				/>
+			</div>
 			<main className="main_idea_content">
 				<div className="heading_container">
 					<Heading text={"Have an idea?"} lineRight className="have_an_idea" />

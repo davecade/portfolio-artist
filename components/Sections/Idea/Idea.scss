@@ -36,8 +36,13 @@
 		z-index: 1; // Ensure this is above the image but below the content
 	}
 
-	.idea_image {
-		z-index: 0;
+	.image_container {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		.idea_image {
+			z-index: 0;
+		}
 	}
 
 	.main_idea_content {
