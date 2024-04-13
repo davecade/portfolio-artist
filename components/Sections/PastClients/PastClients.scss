@@ -28,39 +28,25 @@
 			@include flex-center;
 			width: 100%;
 
-			.aaa {
+			.flex_center_width_full_column {
 				@include flex-center;
 				width: 100%;
 				flex-direction: column;
 
-				.bbb {
+				.flex_center_width_full {
 					@include flex-center;
 					width: 100%;
-				}
 
-				.ccc {
-					@include flex-center;
-					width: 100%;
-				}
-			}
-
-			.ddd {
-				@include flex-center;
-				width: 100%;
-				flex-direction: column;
-
-				.eee {
-					@include flex-center;
-					width: 100%;
-				}
-
-				.fff {
-					@include flex-center;
-					width: 100%;
-				}
-				.ggg {
-					@include flex-center;
-					width: 100%;
+					.past_client_box.client_box_container {
+						.border {
+							.image_container {
+								@media screen and (max-width: 390px) {
+									width: 6rem;
+									height: 6rem;
+								}
+							}
+						}
+					}
 				}
 			}
 		}

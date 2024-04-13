@@ -4,19 +4,21 @@ import "./ClientBox.scss";
 
 type Props = {
 	image: string;
+	className?: string;
 };
 
-const ClientBox = ({ image }: Props) => {
+const ClientBox = ({ image, className }: Props) => {
 	return (
-		<div className="client_box_container">
+		<div className={`client_box_container ${className}`}>
 			<div className="border">
-				<Image
-					alt={"client's name and logo"}
-					src={image}
-					height={100}
-					width={100}
-					layout="responsive"
-				/>
+				<div className="image_container">
+					<Image
+						alt={"client's name and logo"}
+						src={image}
+						fill
+						quality={100}
+					/>
+				</div>
 			</div>
 		</div>
 	);

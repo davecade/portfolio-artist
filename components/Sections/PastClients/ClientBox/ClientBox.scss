@@ -11,5 +11,13 @@
 		padding: 3rem;
 		height: 6rem;
 		width: 100%;
+
+		.image_container {
+			@include flex-center;
+			position: absolute;
+			width: 10rem;
+			height: 6rem;
+			background-color: var(--light-grey);
+		}
 	}
 }
