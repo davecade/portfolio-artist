@@ -2,11 +2,8 @@
 
 .hero_container {
 	@include flex-center;
-	// position: relative;
 	min-height: 700px;
 	height: 100vh;
-	// width: 100%;
-	border: 1px solid green;
 
 	&::before {
 		content: "";
@@ -24,11 +21,6 @@
 		z-index: 1;
 	}
 	.image_container {
-		// position: absolute;
-		// min-height: 700px;
-		// height: 100vh;
-		// width: 100%;
-
 		.hero_image {
 			z-index: 0;
 			object-fit: cover;
@@ -37,7 +29,6 @@
 
 	.main_hero_content {
 		@include flex-center;
-		// position: absolute;
 		flex-direction: column;
 		width: 100%;
 		max-width: 1360px;

@@ -1,8 +1,9 @@
 @import "@/styles/mixins";
 
 .service_container {
+	@include flex-center;
+	flex-direction: column;
 	cursor: pointer;
-	width: 340px;
 	padding-bottom: 3rem;
 
 	.image_container {
@@ -39,7 +40,6 @@
 		}
 
 		.image {
-			width: 100%;
 			transition: all 0.3s ease;
 		}
 

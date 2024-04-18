@@ -25,6 +25,7 @@ function Hero() {
 					quality={100}
 					fill
 					className="hero_image"
+					priority
 				/>
 			</div>
 

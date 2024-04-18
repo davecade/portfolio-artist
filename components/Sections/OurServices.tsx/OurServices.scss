@@ -8,6 +8,7 @@
 		@include flex-center;
 		flex-direction: column;
 		width: 1360px;
+		padding: 0 1rem;
 
 		.heading_action_link_container {
 			@include flex-center;
@@ -30,8 +31,36 @@
 
 		.services_list {
 			@include flex-start;
-			width: 100%;
-			flex-wrap: wrap;
+			width: fit-content;
+			border: 1px solid red;
+
+			.service_container {
+				.image_container {
+					@media screen and (max-width: 1400px) {
+						--scale-factor: 0.92;
+						width: calc(328px * var(--scale-factor));
+						height: calc(598px * var(--scale-factor));
+					}
+
+					@media screen and (max-width: 1260px) {
+						--scale-factor: 0.86;
+						width: calc(328px * var(--scale-factor));
+						height: calc(598px * var(--scale-factor));
+					}
+
+					@media screen and (max-width: 1200px) {
+						--scale-factor: 0.78;
+						width: calc(328px * var(--scale-factor));
+						height: calc(598px * var(--scale-factor));
+					}
+
+					@media screen and (max-width: 1060px) {
+						--scale-factor: 0.7;
+						width: calc(328px * var(--scale-factor));
+						height: calc(598px * var(--scale-factor));
+					}
+				}
+			}
 		}
 	}
 }

@@ -17,6 +17,7 @@ const ClientBox = ({ image, className }: Props) => {
 						src={image}
 						fill
 						quality={100}
+						
 					/>
 				</div>
 			</div>

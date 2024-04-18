@@ -19,7 +19,13 @@ const ServiceCard = ({ image, name, description, href }: Props) => {
 	return (
 		<div className="service_container" onClick={handleClick}>
 			<div className="image_container">
-				<Image className="image" src={image} alt={name} fill />
+				<Image
+					className="image"
+					src={image}
+					alt={name}
+					fill
+					// layout="responsive"
+				/>
 				<MdArrowOutward className="arrow_icon" size={40} />
 			</div>
 			<div className="text_container">

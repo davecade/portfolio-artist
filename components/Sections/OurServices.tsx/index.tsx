@@ -12,7 +12,11 @@ const OurServices = () => {
 			<div className="content">
 				<div className="heading_action_link_container">
 					<div className="left_side">
-						<Heading text={"Our Services"} lineRight className="our_services_left_side_heading" />
+						<Heading
+							text={"Our Services"}
+							lineRight
+							className="our_services_left_side_heading"
+						/>
 					</div>
 					<div className="right_side">
 						<PageLink text={"Browse all services"} href={""} />
