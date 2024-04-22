@@ -5,8 +5,11 @@ import "./OurServices.scss";
 import PageLink from "../../PageLink";
 import ServiceCard from "./ServiceCard";
 import { services } from "@/data";
+import useWindowWidth from "@/hooks/useWindowWidth";
 
 const OurServices = () => {
+	const windowWidth = useWindowWidth();
+
 	return (
 		<div className="our_services_container">
 			<div className="content">
@@ -23,15 +26,48 @@ const OurServices = () => {
 					</div>
 				</div>
 				<div className="services_list">
-					{services.map((service, index) => (
-						<ServiceCard
-							key={index}
-							image={service.image}
-							name={service.name}
-							description={service.description}
-							href={""}
-						/>
-					))}
+					{services.map((service, index) => {
+						if (windowWidth > 980) {
+							return (
+								<ServiceCard
+									key={index}
+									image={service.image}
+									name={service.name}
+									description={service.description}
+									href={""}
+								/>
+							);
+						}
+
+						if (windowWidth <= 980) {
+							return (
+								<>
+									<div className="service_card_container_small">
+										{index % 2 === 1 && (
+											<ServiceCard
+												key={index}
+												image={service.image}
+												name={service.name}
+												description={service.description}
+												href={""}
+											/>
+										)}
+									</div>
+									<div className="service_card_container_small">
+										{index % 2 === 0 && (
+											<ServiceCard
+												key={index}
+												image={service.image}
+												name={service.name}
+												description={service.description}
+												href={""}
+											/>
+										)}
+									</div>
+								</>
+							);
+						}
+					})}
 				</div>
 			</div>
 		</div>
