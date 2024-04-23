@@ -24,7 +24,6 @@ const ServiceCard = ({ image, name, description, href }: Props) => {
 					src={image}
 					alt={name}
 					fill
-					// layout="responsive"
 				/>
 				<MdArrowOutward className="arrow_icon" size={40} />
 			</div>

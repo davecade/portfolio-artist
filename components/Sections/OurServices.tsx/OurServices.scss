@@ -52,51 +52,6 @@
 							height: 0.2rem;
 						}
 					}
-
-					// @media screen and (max-width: 750px) {
-					// 	.heading_text {
-					// 		font-size: 3.8rem;
-					// 	}
-
-					// 	.heading_line {
-					// 		width: 6rem;
-					// 		height: 0.2rem;
-					// 	}
-					// }
-
-					// @media screen and (max-width: 670px) {
-					// 	.heading_text {
-					// 		font-size: 3.3rem;
-					// 	}
-
-					// 	.heading_line {
-					// 		width: 6rem;
-					// 		height: 0.2rem;
-					// 	}
-					// }
-
-					// @media screen and (max-width: 470px) {
-					// 	.heading_text {
-					// 		font-size: 2rem;
-					// 		padding-right: 1rem;
-					// 	}
-
-					// 	.heading_line {
-					// 		width: 3rem;
-					// 		height: 0.1rem;
-					// 	}
-					// }
-
-					// @media screen and (max-width: 350px) {
-					// 	.heading_text {
-					// 		font-size: 2rem;
-					// 	}
-
-					// 	.heading_line {
-					// 		width: 2rem;
-					// 		height: 0.1rem;
-					// 	}
-					// }
 				}
 			}
 
@@ -111,6 +66,26 @@
 			width: fit-content;
 
 			.service_container {
+				@media screen and (max-width: 1400px) {
+					--scale-factor: 0.92;
+					width: calc(328px * var(--scale-factor));
+				}
+
+				@media screen and (max-width: 1260px) {
+					--scale-factor: 0.86;
+					width: calc(328px * var(--scale-factor));
+				}
+
+				@media screen and (max-width: 1200px) {
+					--scale-factor: 0.78;
+					width: calc(328px * var(--scale-factor));
+				}
+
+				@media screen and (max-width: 1070px) {
+					--scale-factor: 0.7;
+					width: calc(328px * var(--scale-factor));
+				}
+
 				.image_container {
 					@media screen and (max-width: 1400px) {
 						--scale-factor: 0.92;
@@ -156,34 +131,41 @@
 					}
 				}
 			}
-
-			.service_card_container_small {
-				@include flex-center;
-				flex-direction: column;
-
-				.image_container {
-					@media screen and (max-width: 980px) {
-						--scale-factor: 1;
-						width: calc(328px * var(--scale-factor));
-						height: calc(598px * var(--scale-factor));
-					}
+			.service_card_two_column_container {
+				@media screen and (max-width: 980px) {
+					@include flex-center;
+					flex-direction: column;
 				}
 
-				.text_container {
-					.name {
-						margin-bottom: 1rem;
+				.service_card_container_small {
+					@media screen and (max-width: 980px) {
+						@include flex-center;
 					}
 
-					.description {
-						@media screen and (max-width: 1070px) {
-							line-height: 1.5rem;
+					.image_container {
+						@media screen and (max-width: 980px) {
+							--scale-factor: 1;
+							width: calc(328px * var(--scale-factor));
+							height: calc(598px * var(--scale-factor));
 						}
 					}
 
-					.name {
-						@media screen and (max-width: 1070px) {
-							font-size: 1.5rem;
-							margin-bottom: 0.5rem;
+					.text_container {
+						.name {
+							margin-bottom: 1rem;
+						}
+
+						.description {
+							@media screen and (max-width: 1070px) {
+								line-height: 1.5rem;
+							}
+						}
+
+						.name {
+							@media screen and (max-width: 1070px) {
+								font-size: 1.5rem;
+								margin-bottom: 0.5rem;
+							}
 						}
 					}
 				}
