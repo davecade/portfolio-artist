@@ -221,11 +221,13 @@
 						}
 
 						.text_container {
-							.name {
-								margin-bottom: 1rem;
+							@media screen and (max-width: 500px) {
+								padding: 0rem 0.1rem;
 							}
 
 							.name {
+								margin-bottom: 1rem;
+
 								@media screen and (max-width: 1070px) {
 									font-size: 1.5rem;
 									margin-bottom: 0.5rem;
@@ -233,6 +235,10 @@
 
 								@media screen and (max-width: 980px) {
 									font-size: 1.2rem;
+								}
+
+								@media screen and (max-width: 500px) {
+									text-align: center;
 								}
 
 								@media screen and (max-width: 350px) {
@@ -249,9 +255,13 @@
 									font-size: 0.9rem;
 								}
 
+								@media screen and (max-width: 500px) {
+									text-align: center;
+									line-height: 1rem;
+								}
+
 								@media screen and (max-width: 421px) {
 									font-size: 0.8rem;
-									line-height: 1rem;
 								}
 							}
 						}
