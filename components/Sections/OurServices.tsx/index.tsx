@@ -22,7 +22,11 @@ const OurServices = () => {
 						/>
 					</div>
 					<div className="right_side">
-						<PageLink text={"Browse all services"} href={""} />
+						<PageLink
+							text={"Browse all services"}
+							href={""}
+							className="our_services_page_link"
+						/>
 					</div>
 				</div>
 				<div className="services_list">
@@ -39,7 +43,7 @@ const OurServices = () => {
 							);
 						})}
 
-					{windowWidth <= 980 && (
+					{windowWidth <= 980 && windowWidth > 420 && (
 						<div className="service_card_two_column_container">
 							<div className="service_card_container_small">
 								{services[0] && (
@@ -81,6 +85,21 @@ const OurServices = () => {
 									/>
 								)}
 							</div>
+						</div>
+					)}
+					{windowWidth <= 420 && (
+						<div className="service_card_container_column">
+							{services.map((service, index) => {
+								return (
+									<ServiceCard
+										key={index}
+										image={service.image}
+										name={service.name}
+										description={service.description}
+										href={""}
+									/>
+								);
+							})}
 						</div>
 					)}
 				</div>
