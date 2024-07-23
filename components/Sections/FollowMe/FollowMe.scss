@@ -1,0 +1,58 @@
+@import "@/styles/mixins";
+
+.follow_me_container {
+	@include flex-center;
+	width: 100%;
+
+	.content {
+		width: 1360px;
+
+		.follow_me_heading_description_container {
+			@include flex-center;
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 5rem;
+
+			.follow_me_heading {
+				@include component_heading_medium;
+			}
+
+			.description {
+				@include description-font;
+				width: 30rem;
+				text-align: center;
+			}
+		}
+
+		.portfolio_projects_container {
+			height: 984px;
+			@include flex-space-evenly;
+			flex-direction: column;
+
+			.top {
+				@include flex-space-evenly;
+
+				.top_right {
+					@include flex-space-evenly;
+					flex-direction: column;
+
+					.top_right_bottom {
+						@include flex-space-evenly;
+					}
+				}
+			}
+
+			.bottom {
+				@include flex-space-evenly;
+
+				.bottom_left {
+					@include flex-space-evenly;
+				}
+			}
+		}
+		.all_projects_button_container {
+			@include flex-center;
+			padding-top: 3rem;
+		}
+	}
+}

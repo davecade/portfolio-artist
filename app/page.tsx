@@ -5,6 +5,7 @@ import Spacer from "@/components/Spacer/Spacer";
 import PastClients from "@/components/Sections/PastClients";
 import OurProcess from "@/components/Sections/OurProcess";
 import Idea from "@/components/Sections/Idea";
+import FollowMe from "@/components/Sections/FollowMe";
 
 export default function Home() {
 	return (
@@ -20,6 +21,8 @@ export default function Home() {
 			<OurProcess />
 			<Spacer gap="xlarge" />
 			<Idea />
+			<Spacer gap="medium" />
+			<FollowMe />
 		</main>
 	);
 }
